@@ -22,7 +22,7 @@ function parseCSVLine(line) {
 }
 
 function main() {
-  const csvPath = '/Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research/solana_influential_accounts.csv';
+  const csvPath = 'user/solana-twitter-research/solana_influential_accounts.csv';
   const content = fs.readFileSync(csvPath, 'utf8');
   const lines = content.split('\n').filter(l => l.trim() !== "");
   const headers = parseCSVLine(lines[0]);
