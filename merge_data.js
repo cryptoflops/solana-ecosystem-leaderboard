@@ -22,7 +22,7 @@ function parseCSVLine(line, delimiter = ',') {
   let inQuotes = false;
   
   for (let i = 0; i < line.length; i++) {
-    const char = line[i];
+    const char = line.charAt(i);
     if (char === '"') {
       inQuotes = !inQuotes;
     } else if (char === delimiter && !inQuotes) {
@@ -37,10 +37,10 @@ function parseCSVLine(line, delimiter = ',') {
 }
 
 function main() {
-  const workspaceDir = "/Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research";
-  const mdFilePath = path.join(workspaceDir, "Build a live dashboard of the top 70 Solana ecosys.md");
-  const csvFilePath = path.join(workspaceDir, "Influential_Solana_Twitter_Accounts.csv");
-  const outputJsonPath = path.join(workspaceDir, "data.json");
+  const workspaceDir = path.normalize("/Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research");
+  const mdFilePath = path.normalize(path.join(workspaceDir, "Build a live dashboard of the top 70 Solana ecosys.md"));
+  const csvFilePath = path.normalize(path.join(workspaceDir, "Influential_Solana_Twitter_Accounts.csv"));
+  const outputJsonPath = path.normalize(path.join(workspaceDir, "data.json"));
 
   // 1. Read Markdown file to extract Python definitions of accounts
   const mdContent = fs.readFileSync(mdFilePath, 'utf8');
@@ -94,9 +94,12 @@ function main() {
     const values = parseCSVLine(csvLines[i], delimiter);
     if (values.length < 4) continue;
     
-    const row = {};
+    const row = Object.create(null);
     for (let j = 0; j < headers.length; j++) {
-      row[headers[j].trim()] = values[j] ? values[j].trim() : "";
+      const key = headers[j].trim();
+      if (key !== '__proto__' && key !== 'constructor' && key !== 'prototype') {
+        row[key] = values[j] ? values[j].trim() : "";
+      }
     }
     
     if (row["Twitter Link"] || row["Twitter URL"]) {
