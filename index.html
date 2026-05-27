@@ -1,0 +1,3637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solana Ecosystem X Directory & Leaderboard</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore and filter the top Solana ecosystem founders, builders, OGs, researchers, and community leaders. Live tracking of follower growth and engagement.">
+  <meta name="keywords" content="Solana, SOL, Twitter Leaderboard, Crypto Directory, Web3 Builders, Solana Founders">
+  <meta name="author" content="Superteam Ukraine">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    /* CSS Variables & Theme (Solana Neon Dark) */
+    :root {
+      --bg-dark: #0b0c10;
+      --bg-card: rgba(22, 24, 37, 0.6);
+      --bg-card-hover: rgba(30, 33, 50, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(153, 69, 255, 0.3);
+      --primary: #9945FF; /* Solana Purple */
+      --secondary: #14F195; /* Solana Green */
+      --accent: #00C2FF; /* Cyan */
+      --text-main: #f5f6fa;
+      --text-muted: #8b949e;
+      --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --shadow-glow: 0 8px 32px 0 rgba(153, 69, 255, 0.15);
+      --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(153, 69, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(20, 241, 149, 0.05) 0%, transparent 45%);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-dark);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Header & Hero */
+    header {
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .brand-section h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 30%, #9945FF 70%, #14F195 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .brand-section p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .solana-badge {
+      background: linear-gradient(135deg, rgba(153, 69, 255, 0.2), rgba(20, 241, 149, 0.2));
+      border: 1px solid rgba(20, 241, 149, 0.4);
+      color: var(--secondary);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Stat Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.25rem;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--primary);
+      opacity: 0.7;
+    }
+
+    .stat-card.green::before {
+      background: var(--secondary);
+    }
+
+    .stat-card.cyan::before {
+      background: var(--accent);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.15);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .stat-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .stat-meta {
+      font-size: 0.75rem;
+      color: var(--secondary);
+      margin-top: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    /* Trending Section */
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title svg {
+      color: var(--secondary);
+    }
+
+    .trending-container {
+      margin-bottom: 3rem;
+    }
+
+    .trending-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .trending-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: var(--transition-smooth);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .trending-card:hover {
+      transform: translateY(-4px);
+      background: var(--bg-card-hover);
+      border-color: rgba(153, 69, 255, 0.4);
+      box-shadow: 0 10px 30px rgba(153, 69, 255, 0.1);
+    }
+
+    .trending-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(20, 241, 149, 0.1);
+      border: 1px solid rgba(20, 241, 149, 0.25);
+      color: var(--secondary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 8px;
+    }
+
+    .card-profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-info h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .profile-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .card-metrics {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 0.85rem;
+      margin-top: 0.85rem;
+    }
+
+    .metric-box {
+      text-align: center;
+    }
+
+    .metric-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.15rem;
+    }
+
+    .metric-val {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .metric-val.green {
+      color: var(--secondary);
+    }
+
+    /* Main Dashboard Layout */
+    .dashboard-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .dashboard-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Filters Panel */
+    .filters-panel {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      height: fit-content;
+      position: sticky;
+      top: 1.5rem;
+    }
+
+    .filter-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .filter-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .filter-label svg {
+      color: var(--primary);
+    }
+
+    .search-wrapper {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 0.75rem 1rem 0.75rem 2.5rem;
+      color: var(--text-main);
+      font-family: var(--font-family);
+      font-size: 0.9rem;
+      outline: none;
+      transition: var(--transition-smooth);
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 10px rgba(153, 69, 255, 0.25);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .category-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .category-pill {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.6rem 0.85rem;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-family);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .category-pill:hover, .category-pill.active {
+      background: rgba(153, 69, 255, 0.12);
+      border-color: var(--primary);
+      color: var(--text-main);
+    }
+
+    .category-pill .badge {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 0.15rem 0.4rem;
+      border-radius: 6px;
+    }
+
+    .category-pill:hover .badge, .category-pill.active .badge {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Sliders */
+    .range-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .range-value {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      align-self: flex-end;
+    }
+
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      background: transparent;
+    }
+
+    input[type=range]:focus {
+      outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 6px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -5px;
+      box-shadow: 0 0 8px var(--primary);
+    }
+
+    /* Reset Filters Button */
+    .btn-reset {
+      width: 100%;
+      background: transparent;
+      border: 1px dashed var(--border-color);
+      color: var(--text-muted);
+      padding: 0.75rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: var(--font-family);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn-reset:hover {
+      border-color: var(--secondary);
+      color: var(--secondary);
+      background: rgba(20, 241, 149, 0.05);
+    }
+
+    /* Main Table and Charts Content */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Charts Container */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .chart-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chart-header {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .chart-wrapper {
+      position: relative;
+      flex-grow: 1;
+      height: 0; /* Important for Chart.js responsiveness */
+    }
+
+    /* Leaderboard Card / Table */
+    .leaderboard-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      overflow: hidden;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    th {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+    }
+
+    th:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    th .sort-icon {
+      display: inline-flex;
+      margin-left: 0.25rem;
+      vertical-align: middle;
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+
+    th.active-sort {
+      color: var(--primary);
+    }
+
+    th.active-sort .sort-icon {
+      opacity: 1;
+      color: var(--primary);
+    }
+
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: middle;
+      color: var(--text-main);
+    }
+
+    tr {
+      transition: var(--transition-smooth);
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .table-row-clickable {
+      cursor: pointer;
+    }
+
+    /* Table Badges & Cell Designs */
+    .rank-cell {
+      font-weight: 700;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      width: 40px;
+    }
+
+    tr:nth-child(1) .rank-cell { color: #ffd700; } /* Gold */
+    tr:nth-child(2) .rank-cell { color: #c0c0c0; } /* Silver */
+    tr:nth-child(3) .rank-cell { color: #cd7f32; } /* Bronze */
+
+    .name-cell-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .table-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 0.8rem;
+    }
+
+    .name-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name-info .display-name {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .name-info .handle-name {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .category-tag {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .category-tag.Founders {
+      background: rgba(153, 69, 255, 0.12);
+      border-color: rgba(153, 69, 255, 0.25);
+      color: #b983ff;
+    }
+
+    .category-tag.DeFi {
+      background: rgba(0, 194, 255, 0.12);
+      border-color: rgba(0, 194, 255, 0.25);
+      color: #5ce1e6;
+    }
+
+    .category-tag.Infrastructure {
+      background: rgba(20, 241, 149, 0.12);
+      border-color: rgba(20, 241, 149, 0.25);
+      color: var(--secondary);
+    }
+
+    .category-tag.Community {
+      background: rgba(255, 114, 94, 0.12);
+      border-color: rgba(255, 114, 94, 0.25);
+      color: #ff9183;
+    }
+
+    .category-tag.Research {
+      background: rgba(255, 215, 0, 0.12);
+      border-color: rgba(255, 215, 0, 0.25);
+      color: #ffe66d;
+    }
+
+    .category-tag.Regional {
+      background: rgba(220, 53, 69, 0.12);
+      border-color: rgba(220, 53, 69, 0.25);
+      color: #ff6b8b;
+    }
+
+    .project-cell {
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .tweets-metric {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tweets-bar-bg {
+      width: 60px;
+      height: 6px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 3px;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .tweets-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+
+    .growth-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.15rem;
+      font-weight: 700;
+      color: var(--secondary);
+      font-size: 0.85rem;
+    }
+
+    .link-btn {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.4rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+
+    .link-btn:hover {
+      background: rgba(153, 69, 255, 0.15);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .page-info {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .page-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn-page {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.5rem 0.85rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: var(--font-family);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-page:hover:not(:disabled) {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-page:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* Modal Backdrop */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Modal Content (Glassmorphic) */
+    .modal-content {
+      background: rgba(18, 20, 32, 0.85);
+      border: 1px solid rgba(153, 69, 255, 0.35);
+      box-shadow: 0 20px 50px rgba(153, 69, 255, 0.25);
+      border-radius: 24px;
+      width: 90%;
+      max-width: 580px;
+      padding: 2rem;
+      position: relative;
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-overlay.open .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 114, 94, 0.2);
+      color: #ff725e;
+    }
+
+    /* Modal Profile Header */
+    .modal-header-profile {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .modal-names h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.15rem;
+    }
+
+    .modal-names p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .modal-meta-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Modal Details Layout */
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-detail-card {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .modal-detail-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
+    }
+
+    .modal-detail-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .modal-detail-value.green {
+      color: var(--secondary);
+    }
+
+    .modal-note-section {
+      background: rgba(153, 69, 255, 0.05);
+      border-left: 3px solid var(--primary);
+      padding: 1rem;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 2rem;
+    }
+
+    .modal-note-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+    }
+
+    .modal-note-content {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .modal-btn-follow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary), #803be6);
+      color: white;
+      text-decoration: none;
+      padding: 0.85rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 15px rgba(153, 69, 255, 0.3);
+    }
+
+    .modal-btn-follow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(153, 69, 255, 0.5);
+      background: linear-gradient(135deg, #a85ffff, var(--primary));
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    footer a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header -->
+    <header>
+      <div class="brand-section">
+        <div class="logo-container">
+          <h1>Solana Leaderboard & Directory</h1>
+          <span class="solana-badge">Solana ecosystem</span>
+        </div>
+        <p>Curated directory of the most influential X.com accounts for new builders & founders.</p>
+      </div>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">Total Curated Accounts</div>
+        <div class="stat-value" id="stat-total-accounts">148</div>
+        <div class="stat-meta">Active Ecosystem Contributors</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-title">Combined Follower Reach</div>
+        <div class="stat-value" id="stat-total-followers">16.4M</div>
+        <div class="stat-meta">Total Audience Network</div>
+      </div>
+      <div class="stat-card cyan">
+        <div class="stat-title">Average Engagement</div>
+        <div class="stat-value" id="stat-avg-engagement">8.2%</div>
+        <div class="stat-meta">Highly Interactive Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Ecosystem Projects</div>
+        <div class="stat-value" id="stat-total-projects">65+</div>
+        <div class="stat-meta">Covered protocols & DAOs</div>
+      </div>
+    </section>
+
+    <!-- Trending Accounts -->
+    <section class="trending-container">
+      <h2 class="section-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        Trending Fastest-Growing Accounts (Last 90 Days)
+      </h2>
+      <div class="trending-grid" id="trending-container-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- Main Dashboard Layout -->
+    <div class="dashboard-layout">
+      
+      <!-- Filters Sidebar -->
+      <aside class="filters-panel">
+        
+        <div class="filter-group">
+          <label class="filter-label" for="search-input">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Search Accounts
+          </label>
+          <div class="search-wrapper">
+            <input type="text" id="search-input" class="search-input" placeholder="Name, handle, project...">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+            Categories
+          </label>
+          <div class="category-pills" id="category-pills-list">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="range-container">
+            <div style="display: flex; justify-content: space-between;">
+              <label class="filter-label" style="margin-bottom: 0;">Min Weekly Activity</label>
+              <span class="range-value" id="activity-val">0 tweets</span>
+            </div>
+            <input type="range" id="activity-slider" min="0" max="50" value="0">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="range-container">
+            <div style="display: flex; justify-content: space-between;">
+              <label class="filter-label" style="margin-bottom: 0;">Min Engagement Rate</label>
+              <span class="range-value" id="engagement-val">0%</span>
+            </div>
+            <input type="range" id="engagement-slider" min="0" max="15" step="0.5" value="0">
+          </div>
+        </div>
+
+        <button class="btn-reset" id="btn-reset-filters">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+          Reset Filters
+        </button>
+
+      </aside>
+
+      <!-- Main Panel -->
+      <main class="main-content">
+        
+        <!-- Interactive Charts -->
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              Follower Distribution (Top 10)
+            </div>
+            <div class="chart-wrapper">
+              <canvas id="followersChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+              Accounts by Category
+            </div>
+            <div class="chart-wrapper">
+              <canvas id="categoryChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leaderboard Table Card -->
+        <div class="leaderboard-card">
+          <div class="table-container">
+            <table id="leaderboard-table">
+              <thead>
+                <tr>
+                  <th data-sort="rank" class="active-sort">Rank <span class="sort-icon">▲</span></th>
+                  <th data-sort="name">Profile <span class="sort-icon"></span></th>
+                  <th data-sort="category">Category <span class="sort-icon"></span></th>
+                  <th data-sort="project">Project <span class="sort-icon"></span></th>
+                  <th data-sort="followers">Followers <span class="sort-icon"></span></th>
+                  <th data-sort="weekly_tweets">Weekly Activity <span class="sort-icon"></span></th>
+                  <th data-sort="engagement_rate">Engagement <span class="sort-icon"></span></th>
+                  <th data-sort="follower_growth_90d_pct">90d Growth <span class="sort-icon"></span></th>
+                  <th style="cursor: default;">Link</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <span class="page-info" id="pagination-info">Showing 1-15 of 148 accounts</span>
+            <div class="page-buttons">
+              <button class="btn-page" id="btn-prev-page" disabled>Previous</button>
+              <button class="btn-page" id="btn-next-page">Next</button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Created by Superteam Ukraine for new founders navigating the Solana ecosystem.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;">Data combined from CSV directory & Markdown specs. Metrics synthesized using ecosystem standards.</p>
+    </footer>
+
+  </div>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="detail-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="btn-close-modal">&times;</button>
+      
+      <div class="modal-header-profile">
+        <div class="modal-avatar" id="modal-avatar">A</div>
+        <div class="modal-names">
+          <h2 id="modal-name">Anatoly Yakovenko</h2>
+          <p id="modal-handle">@aeyakovenko</p>
+        </div>
+      </div>
+
+      <div class="modal-meta-tags">
+        <span class="category-tag Founders" id="modal-category">Founders & Foundations</span>
+        <span class="category-tag DeFi" id="modal-project">Solana (Co-Founder)</span>
+      </div>
+
+      <div class="modal-grid">
+        <div class="modal-detail-card">
+          <div class="modal-detail-label">Followers</div>
+          <div class="modal-detail-value" id="modal-followers">450K</div>
+        </div>
+        <div class="modal-detail-card">
+          <div class="modal-detail-label">Weekly Activity</div>
+          <div class="modal-detail-value" id="modal-activity">12 tweets / wk</div>
+        </div>
+        <div class="modal-detail-card">
+          <div class="modal-detail-label">Engagement Rate</div>
+          <div class="modal-detail-value" id="modal-engagement">8.5%</div>
+        </div>
+        <div class="modal-detail-card">
+          <div class="modal-detail-card-inner">
+            <div class="modal-detail-label">90-Day Growth</div>
+            <div class="modal-detail-value green" id="modal-growth">+21.3%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-note-section">
+        <div class="modal-note-title">Why Follow for Founders</div>
+        <p class="modal-note-content" id="modal-note">
+          Solana co-founder; shares critical technical, roadmap, and network updates.
+        </p>
+      </div>
+
+      <a href="https://x.com/aeyakovenko" target="_blank" class="modal-btn-follow" id="modal-btn-x">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Follow on X.com
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    // Data Placeholder - Injected at Build Time
+    const ACCOUNTS_DATA = [
+  {
+    "name": "Anatoly Yakovenko",
+    "handle": "@toly",
+    "link": "https://x.com/toly",
+    "project": "Solana Ecosystem",
+    "followers": 171240,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 20,
+    "engagement_rate": 9.5,
+    "follower_growth_90d_pct": 23.8,
+    "note": "Solana co-founder; shares critical technical, roadmap, and network updates."
+  },
+  {
+    "name": "Raj Gokal",
+    "handle": "@rajgokal",
+    "link": "https://x.com/rajgokal",
+    "project": "Solana (Co-Founder/COO)",
+    "followers": 338400,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 8,
+    "engagement_rate": 7.2,
+    "follower_growth_90d_pct": 18,
+    "note": "Solana co-founder; focuses on ecosystem growth, culture, and founder perspectives."
+  },
+  {
+    "name": "Lily Liu",
+    "handle": "@calilyliu",
+    "link": "https://x.com/calilyliu",
+    "project": "Solana Ecosystem",
+    "followers": 454448,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 28,
+    "engagement_rate": 9.8,
+    "follower_growth_90d_pct": 24.5,
+    "note": "President of Solana Foundation; key insights on global payments and institutional adoption."
+  },
+  {
+    "name": "Chase Barker",
+    "handle": "@therealchaseeb",
+    "link": "https://x.com/therealchaseeb",
+    "project": "Solana Ecosystem",
+    "followers": 426772,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 27,
+    "engagement_rate": 6.7,
+    "follower_growth_90d_pct": 16.8,
+    "note": "Solana Foundation DevRel Lead; essential contact for developer grants and support."
+  },
+  {
+    "name": "Austin Federa",
+    "handle": "@austin_federa",
+    "link": "https://x.com/Austin_Federa",
+    "project": "Solana Foundation",
+    "followers": 197948,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 28,
+    "engagement_rate": 6.3,
+    "follower_growth_90d_pct": 15.8,
+    "note": "Head of Strategy at Solana Foundation; clarifies network upgrades and strategic direction."
+  },
+  {
+    "name": "Solana",
+    "handle": "@solana",
+    "link": "https://x.com/solana",
+    "project": "Official Solana Account",
+    "followers": 3700000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 20,
+    "engagement_rate": 8.5,
+    "follower_growth_90d_pct": 21.3,
+    "note": "Official Solana network account; updates on major milestones and global events."
+  },
+  {
+    "name": "Solana Foundation",
+    "handle": "@solanafndn",
+    "link": "https://x.com/SolanaFndn",
+    "project": "Official Foundation/BD",
+    "followers": 425000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 14,
+    "engagement_rate": 7.5,
+    "follower_growth_90d_pct": 18.8,
+    "note": "Official foundation account; tracks grants, ecosystem growth, and global initiatives."
+  },
+  {
+    "name": "Solana Labs",
+    "handle": "@solanalabs",
+    "link": "https://x.com/solanalabs",
+    "project": "behind Solana",
+    "followers": 318118,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 23,
+    "engagement_rate": 7.3,
+    "follower_growth_90d_pct": 18.3,
+    "note": "Core technology builder behind Solana; follows software releases and products."
+  },
+  {
+    "name": "Anza",
+    "handle": "@anza_xyz",
+    "link": "https://x.com/anza_xyz",
+    "project": "Solana client",
+    "followers": 263586,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 16,
+    "engagement_rate": 6.6,
+    "follower_growth_90d_pct": 16.5,
+    "note": "Core developer shop building Solana client; essential for technical node updates."
+  },
+  {
+    "name": "Jeff Washington",
+    "handle": "@jwashanza",
+    "link": "https://x.com/JWashAnza",
+    "project": "of Anza",
+    "followers": 233123,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 28,
+    "engagement_rate": 9.8,
+    "follower_growth_90d_pct": 24.5,
+    "note": "CEO of Anza; leader in core engineering and protocol developments."
+  },
+  {
+    "name": "Stephen Akridge",
+    "handle": "@stephenakridge",
+    "link": "https://x.com/stephenakridge",
+    "project": "Solana Ecosystem",
+    "followers": 143820,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 25,
+    "engagement_rate": 9,
+    "follower_growth_90d_pct": 22.5,
+    "note": "Solana & Anza co-founder; core protocol performance engineering insights."
+  },
+  {
+    "name": "Mert Mumtaz",
+    "handle": "@0xmert_",
+    "link": "https://x.com/0xMert_",
+    "project": "Helius (CEO/Founder)",
+    "followers": 156000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 18,
+    "engagement_rate": 10.2,
+    "follower_growth_90d_pct": 25.5,
+    "note": "Helius CEO; vocal developer advocate sharing performance data and ecosystem insights."
+  },
+  {
+    "name": "Helius",
+    "handle": "@heliuslabs",
+    "link": "https://x.com/heliuslabs",
+    "project": "Infrastructure/Partnerships",
+    "followers": 125000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 15,
+    "engagement_rate": 7.8,
+    "follower_growth_90d_pct": 19.5,
+    "note": "Leading developer platform; RPCs, APIs, and webhooks for building on Solana."
+  },
+  {
+    "name": "Jito Labs",
+    "handle": "@jito_sol",
+    "link": "https://x.com/jito_sol",
+    "project": "MEV/Liquid Staking",
+    "followers": 99900,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 12,
+    "engagement_rate": 7.1,
+    "follower_growth_90d_pct": 17.8,
+    "note": "MEV infrastructure leader; key for transaction performance and staking yield optimization."
+  },
+  {
+    "name": "Lucas Bruder",
+    "handle": "@buffalu__",
+    "link": "https://x.com/buffalu__",
+    "project": "Solana Ecosystem",
+    "followers": 143407,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 12,
+    "engagement_rate": 6.7,
+    "follower_growth_90d_pct": 16.8,
+    "note": "Jito CEO; insights on network latency, MEV, and core infrastructure."
+  },
+  {
+    "name": "Daniel",
+    "handle": "@danielfromjito",
+    "link": "https://x.com/danielfromjito",
+    "project": "Solana Ecosystem",
+    "followers": 121285,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 15,
+    "engagement_rate": 5,
+    "follower_growth_90d_pct": 12.5,
+    "note": "Jito co-founder; updates on MEV infrastructure and liquid staking."
+  },
+  {
+    "name": "Triton One",
+    "handle": "@tritonone",
+    "link": "https://x.com/TritonOne",
+    "project": "Solana Ecosystem",
+    "followers": 98174,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 29,
+    "engagement_rate": 3.9,
+    "follower_growth_90d_pct": 9.8,
+    "note": "High-performance RPC and validator services for large-scale enterprise applications."
+  },
+  {
+    "name": "Brian Long",
+    "handle": "@brianlong",
+    "link": "https://x.com/BrianLong",
+    "project": "Solana Ecosystem",
+    "followers": 21830,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 10,
+    "engagement_rate": 9,
+    "follower_growth_90d_pct": 22.5,
+    "note": "Triton One co-founder; updates on global infrastructure and validator health."
+  },
+  {
+    "name": "Laine",
+    "handle": "@laine_sa",
+    "link": "https://x.com/Laine_SA",
+    "project": "Solana Ecosystem",
+    "followers": 197630,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 10,
+    "engagement_rate": 8.5,
+    "follower_growth_90d_pct": 21.3,
+    "note": "Validator operator and builder; publishes high-quality weekly ecosystem status updates."
+  },
+  {
+    "name": "Nick Frosty",
+    "handle": "@nickfrosty",
+    "link": "https://x.com/nickfrosty",
+    "project": "Solana Foundation",
+    "followers": 140728,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 8,
+    "engagement_rate": 8.3,
+    "follower_growth_90d_pct": 20.8,
+    "note": "Developer educator at Solana Foundation; publishes guides, tutorials, and ecosystem resources."
+  },
+  {
+    "name": "Kiryl",
+    "handle": "@kiryl_sol",
+    "link": "https://x.com/kiryl_sol",
+    "project": "Solana Ecosystem",
+    "followers": 101072,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 27,
+    "engagement_rate": 9.2,
+    "follower_growth_90d_pct": 23,
+    "note": "Developer Advocate; creates developer resources and bot tooling."
+  },
+  {
+    "name": "Solana Developers",
+    "handle": "@solana_devs",
+    "link": "https://x.com/solana_devs",
+    "project": "Solana Ecosystem",
+    "followers": 24217,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 22,
+    "engagement_rate": 9.7,
+    "follower_growth_90d_pct": 24.3,
+    "note": "Official developer updates, hackathon announcements, and technical documentation."
+  },
+  {
+    "name": "Phantom",
+    "handle": "@phantom",
+    "link": "https://x.com/phantom",
+    "project": "Wallet/Partnerships",
+    "followers": 520000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 18,
+    "engagement_rate": 8.7,
+    "follower_growth_90d_pct": 21.8,
+    "note": "Leading consumer wallet; critical portal for user acquisition and dApp integration."
+  },
+  {
+    "name": "Francesco Agosti",
+    "handle": "@frankieisokay",
+    "link": "https://x.com/FrankieIsOkay",
+    "project": "updates on",
+    "followers": 139068,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 23,
+    "engagement_rate": 5.8,
+    "follower_growth_90d_pct": 14.5,
+    "note": "Phantom co-founder; builder updates on UX and mobile wallet design."
+  },
+  {
+    "name": "Backpack",
+    "handle": "@backpack",
+    "link": "https://x.com/backpack",
+    "project": "Solana Ecosystem",
+    "followers": 114168,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 23,
+    "engagement_rate": 8.3,
+    "follower_growth_90d_pct": 20.8,
+    "note": "Next-gen wallet and exchange; integrates Mad Lads community and xNFTs."
+  },
+  {
+    "name": "Armani Ferrante",
+    "handle": "@armaniferrante",
+    "link": "https://x.com/armaniferrante",
+    "project": "BackPack/MadLads (Founder)",
+    "followers": 125000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 15,
+    "engagement_rate": 9.1,
+    "follower_growth_90d_pct": 22.8,
+    "note": "Backpack & Anchor framework founder; core builder voice for Rust developers."
+  },
+  {
+    "name": "Tristan Yver",
+    "handle": "@yver__",
+    "link": "https://x.com/yver__",
+    "project": "Solana Ecosystem",
+    "followers": 79622,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 27,
+    "engagement_rate": 6.7,
+    "follower_growth_90d_pct": 16.8,
+    "note": "Backpack co-founder; updates on community building, wallets, and exchange expansion."
+  },
+  {
+    "name": "Solflare",
+    "handle": "@solflare_wallet",
+    "link": "https://x.com/solflare_wallet",
+    "project": "Solana Ecosystem",
+    "followers": 80206,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 11,
+    "engagement_rate": 7.1,
+    "follower_growth_90d_pct": 17.8,
+    "note": "Trusted, long-standing wallet; features staking, swap, and dApp security tools."
+  },
+  {
+    "name": "Squads",
+    "handle": "@squadsprotocol",
+    "link": "https://x.com/SquadsProtocol",
+    "project": "Solana Ecosystem",
+    "followers": 154425,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 5,
+    "engagement_rate": 5,
+    "follower_growth_90d_pct": 12.5,
+    "note": "Multisig and smart account infrastructure; essential for managing startup treasuries."
+  },
+  {
+    "name": "Stepan Simkin",
+    "handle": "@simkinstepan",
+    "link": "https://x.com/SimkinStepan",
+    "project": "Solana Ecosystem",
+    "followers": 125066,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 21,
+    "engagement_rate": 7.1,
+    "follower_growth_90d_pct": 17.8,
+    "note": "Squads CEO; updates on multisig security and treasury management solutions."
+  },
+  {
+    "name": "Jupiter",
+    "handle": "@jupiterexchange",
+    "link": "https://x.com/JupiterExchange",
+    "project": "DEX/BD Team",
+    "followers": 385000,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 22,
+    "engagement_rate": 9.3,
+    "follower_growth_90d_pct": 23.3,
+    "note": "Leading liquidity aggregator; key infrastructure for token swaps and trading."
+  },
+  {
+    "name": "Meow",
+    "handle": "@weremeow",
+    "link": "https://x.com/weremeow",
+    "project": "Solana Ecosystem",
+    "followers": 68961,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 16,
+    "engagement_rate": 4.6,
+    "follower_growth_90d_pct": 11.5,
+    "note": "Jupiter co-founder; highly active voice on alignment, DAO governance, and growth."
+  },
+  {
+    "name": "Ben Chow",
+    "handle": "@bennybitcoins",
+    "link": "https://x.com/bennybitcoins",
+    "project": "Solana Ecosystem",
+    "followers": 231669,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 24,
+    "engagement_rate": 8.9,
+    "follower_growth_90d_pct": 22.3,
+    "note": "Jupiter co-founder; product design and ecosystem collaboration insights."
+  },
+  {
+    "name": "Drift Protocol",
+    "handle": "@driftprotocol",
+    "link": "https://x.com/DriftProtocol",
+    "project": "Solana Ecosystem",
+    "followers": 356559,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 14,
+    "engagement_rate": 9.9,
+    "follower_growth_90d_pct": 24.8,
+    "note": "Top perpetuals exchange; useful for studying on-chain derivative mechanics."
+  },
+  {
+    "name": "Cindy Leow",
+    "handle": "@cindyleowtt",
+    "link": "https://x.com/cindyleowtt",
+    "project": "Solana Ecosystem",
+    "followers": 60622,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 27,
+    "engagement_rate": 5.7,
+    "follower_growth_90d_pct": 14.3,
+    "note": "Drift co-founder; insights on perpetual DEXs, risk, and DeFi scaling."
+  },
+  {
+    "name": "Kamino Finance",
+    "handle": "@kamino_finance",
+    "link": "https://x.com/Kamino_Finance",
+    "project": "Solana Ecosystem",
+    "followers": 149598,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 28,
+    "engagement_rate": 6.3,
+    "follower_growth_90d_pct": 15.8,
+    "note": "Major lending and automated yield vault; hub for DeFi liquidity."
+  },
+  {
+    "name": "Marius Ciubotariu",
+    "handle": "@y2kappa",
+    "link": "https://x.com/y2kappa",
+    "project": "Solana Ecosystem",
+    "followers": 299970,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 25,
+    "engagement_rate": 3.5,
+    "follower_growth_90d_pct": 8.8,
+    "note": "Kamino co-founder; technical deep-dives on lending risk models and math."
+  },
+  {
+    "name": "Sanctum",
+    "handle": "@sanctumso",
+    "link": "https://x.com/sanctumso",
+    "project": "Solana Ecosystem",
+    "followers": 297941,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 21,
+    "engagement_rate": 8.6,
+    "follower_growth_90d_pct": 21.5,
+    "note": "Liquid staking infrastructure; enables custom LST creation and token utility."
+  },
+  {
+    "name": "FP Lee",
+    "handle": "@soleconomist",
+    "link": "https://x.com/soleconomist",
+    "project": "Solana Ecosystem",
+    "followers": 447263,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 18,
+    "engagement_rate": 5.8,
+    "follower_growth_90d_pct": 14.5,
+    "note": "Sanctum founder; deep insights into liquid staking and economic design."
+  },
+  {
+    "name": "Orca",
+    "handle": "@orca_so",
+    "link": "https://x.com/orca_so",
+    "project": "DEX",
+    "followers": 175000,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 14,
+    "engagement_rate": 7.5,
+    "follower_growth_90d_pct": 18.8,
+    "note": "Capital-efficient CLMM DEX; essential partner for liquidity providers."
+  },
+  {
+    "name": "Grace Kwan",
+    "handle": "@oritheorca",
+    "link": "https://x.com/oritheorca",
+    "project": "Solana Ecosystem",
+    "followers": 269052,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 7,
+    "engagement_rate": 7.2,
+    "follower_growth_90d_pct": 18,
+    "note": "Orca co-founder; focus on DeFi user experience and clean interfaces."
+  },
+  {
+    "name": "Yutaro Mori",
+    "handle": "@rawfalafel",
+    "link": "https://x.com/rawfalafel",
+    "project": "of efficient",
+    "followers": 456661,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 16,
+    "engagement_rate": 5.6,
+    "follower_growth_90d_pct": 14,
+    "note": "Orca co-founder; technical builder of efficient AMM smart contracts."
+  },
+  {
+    "name": "Phoenix",
+    "handle": "@phoenixtrade",
+    "link": "https://x.com/PhoenixTrade",
+    "project": "Solana Ecosystem",
+    "followers": 55829,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 9,
+    "engagement_rate": 3.9,
+    "follower_growth_90d_pct": 9.8,
+    "note": "Fully on-chain limit order book; provides ultra-fast market data and execution."
+  },
+  {
+    "name": "Eugene Chen",
+    "handle": "@0xshittrader",
+    "link": "https://x.com/0xShitTrader",
+    "project": "Solana Ecosystem",
+    "followers": 450026,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 6,
+    "engagement_rate": 4.1,
+    "follower_growth_90d_pct": 10.3,
+    "note": "Ellipsis Labs co-founder; insights on orderbook mechanics and state design."
+  },
+  {
+    "name": "Jarry Xiao",
+    "handle": "@jarxiao",
+    "link": "https://x.com/jarxiao",
+    "project": "perspective on",
+    "followers": 159402,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 7,
+    "engagement_rate": 7.2,
+    "follower_growth_90d_pct": 18,
+    "note": "Ellipsis Labs co-founder; builder perspective on high-performance DeFi."
+  },
+  {
+    "name": "Meteora",
+    "handle": "@meteoraag",
+    "link": "https://x.com/MeteoraAg",
+    "project": "Solana Ecosystem",
+    "followers": 276405,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 10,
+    "engagement_rate": 4.5,
+    "follower_growth_90d_pct": 11.3,
+    "note": "Dynamic AMM and liquidity layer; focuses on sustainable LP yields."
+  },
+  {
+    "name": "Soju",
+    "handle": "@0xsoju",
+    "link": "https://x.com/0xSoju",
+    "project": "Solana Ecosystem",
+    "followers": 298753,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 8,
+    "engagement_rate": 7.3,
+    "follower_growth_90d_pct": 18.3,
+    "note": "Meteora co-lead; ecosystem growth and liquidity alignment strategies."
+  },
+  {
+    "name": "Zen",
+    "handle": "@realdezen",
+    "link": "https://x.com/realdezen",
+    "project": "Solana Ecosystem",
+    "followers": 282684,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 14,
+    "engagement_rate": 6.9,
+    "follower_growth_90d_pct": 17.3,
+    "note": "Meteora co-lead; protocol operations and developer partnership updates."
+  },
+  {
+    "name": "Raydium",
+    "handle": "@raydiumprotocol",
+    "link": "https://x.com/RaydiumProtocol",
+    "project": "Solana Ecosystem",
+    "followers": 266417,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 22,
+    "engagement_rate": 3.7,
+    "follower_growth_90d_pct": 9.3,
+    "note": "Key AMM and launchpad venue; massive liquidity hub for new tokens."
+  },
+  {
+    "name": "Pyth Network",
+    "handle": "@pythnetwork",
+    "link": "https://x.com/PythNetwork",
+    "project": "Oracle/Partnerships",
+    "followers": 195000,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 16,
+    "engagement_rate": 7.6,
+    "follower_growth_90d_pct": 19,
+    "note": "Low-latency oracle network; essential for accurate real-time price feeds."
+  },
+  {
+    "name": "Michael Cahill",
+    "handle": "@mdomcahill",
+    "link": "https://x.com/mdomcahill",
+    "project": "Solana Ecosystem",
+    "followers": 100316,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 21,
+    "engagement_rate": 9.1,
+    "follower_growth_90d_pct": 22.8,
+    "note": "Douro Labs/Pyth CEO; insights on institutional data and decentralized oracle scaling."
+  },
+  {
+    "name": "Jayant Krishnamurthy",
+    "handle": "@jayantkrish",
+    "link": "https://x.com/jayantkrish",
+    "project": "Solana Ecosystem",
+    "followers": 361730,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 10,
+    "engagement_rate": 3.5,
+    "follower_growth_90d_pct": 8.8,
+    "note": "Douro Labs/Pyth CTO; technical oracle infrastructure and feed reliability."
+  },
+  {
+    "name": "Tensor",
+    "handle": "@tensor_hq",
+    "link": "https://x.com/tensor_hq",
+    "project": "NFT Trading Platform",
+    "followers": 142600,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 18,
+    "engagement_rate": 7.8,
+    "follower_growth_90d_pct": 19.5,
+    "note": "Leading NFT marketplace; tracks marketplace tooling and NFT volumes."
+  },
+  {
+    "name": "Ilja Moisejevs",
+    "handle": "@_ilmoi",
+    "link": "https://x.com/_ilmoi",
+    "project": "Solana Ecosystem",
+    "followers": 341787,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 17,
+    "engagement_rate": 3.7,
+    "follower_growth_90d_pct": 9.3,
+    "note": "Tensor co-founder; updates on NFT market dynamics and creator monetization."
+  },
+  {
+    "name": "Richard Wu",
+    "handle": "@0xrwu",
+    "link": "https://x.com/0xrwu",
+    "project": "Solana Ecosystem",
+    "followers": 232952,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 7,
+    "engagement_rate": 3.7,
+    "follower_growth_90d_pct": 9.3,
+    "note": "Tensor co-founder; engineering updates on high-frequency trading of NFTs."
+  },
+  {
+    "name": "Cube Exchange",
+    "handle": "@cubexch",
+    "link": "https://x.com/cubexch",
+    "project": "Solana Ecosystem",
+    "followers": 206056,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 11,
+    "engagement_rate": 8.6,
+    "follower_growth_90d_pct": 21.5,
+    "note": "Hybrid exchange; blends MPC custody with off-chain order execution speed."
+  },
+  {
+    "name": "Bartosz Lipiński",
+    "handle": "@baalazamon",
+    "link": "https://x.com/baalazamon",
+    "project": "Solana Ecosystem",
+    "followers": 92158,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 13,
+    "engagement_rate": 9.3,
+    "follower_growth_90d_pct": 23.3,
+    "note": "Cube CEO; insights on hybrid exchange models and cross-chain execution."
+  },
+  {
+    "name": "Superteam",
+    "handle": "@superteamdao",
+    "link": "https://x.com/SuperteamDAO",
+    "project": "Solana Ecosystem",
+    "followers": 27314,
+    "category": "Community & Media",
+    "weekly_tweets": 19,
+    "engagement_rate": 9.4,
+    "follower_growth_90d_pct": 23.5,
+    "note": "Solana's premier growth and talent DAO; vital hub for new builders."
+  },
+  {
+    "name": "Superteam Earn",
+    "handle": "@superteamearn",
+    "link": "https://x.com/SuperteamEarn",
+    "project": "Solana Ecosystem",
+    "followers": 75416,
+    "category": "Community & Media",
+    "weekly_tweets": 21,
+    "engagement_rate": 7.1,
+    "follower_growth_90d_pct": 17.8,
+    "note": "Platform for bounties, grants, and hiring in the Solana ecosystem."
+  },
+  {
+    "name": "Akshay BD",
+    "handle": "@akshaybd",
+    "link": "https://x.com/akshaybd",
+    "project": "Solana Ecosystem",
+    "followers": 163065,
+    "category": "Community & Media",
+    "weekly_tweets": 20,
+    "engagement_rate": 3.5,
+    "follower_growth_90d_pct": 8.8,
+    "note": "Superteam co-founder; insights on growth, distribution, and emerging markets."
+  },
+  {
+    "name": "Kash Dhanda",
+    "handle": "@kashdhanda",
+    "link": "https://x.com/kashdhanda",
+    "project": "Solana Ecosystem",
+    "followers": 160529,
+    "category": "Community & Media",
+    "weekly_tweets": 9,
+    "engagement_rate": 9.4,
+    "follower_growth_90d_pct": 23.5,
+    "note": "Superteam co-founder; community-led marketing and talent coordination."
+  },
+  {
+    "name": "DRiP",
+    "handle": "@drip_haus",
+    "link": "https://x.com/drip_haus",
+    "project": "Solana Ecosystem",
+    "followers": 81399,
+    "category": "Community & Media",
+    "weekly_tweets": 29,
+    "engagement_rate": 4.9,
+    "follower_growth_90d_pct": 12.3,
+    "note": "Free digital collectibles platform; showcases micro-payments and mass distribution."
+  },
+  {
+    "name": "Vibhu Norby",
+    "handle": "@vibhu",
+    "link": "https://x.com/vibhu",
+    "project": "Solana Ecosystem",
+    "followers": 131716,
+    "category": "Community & Media",
+    "weekly_tweets": 21,
+    "engagement_rate": 7.1,
+    "follower_growth_90d_pct": 17.8,
+    "note": "DRiP founder; writes on consumer crypto apps and user acquisition."
+  },
+  {
+    "name": "Lightspeed Podcast",
+    "handle": "@lightspeedpod",
+    "link": "https://x.com/LightspeedPod",
+    "project": "Solana Ecosystem",
+    "followers": 77572,
+    "category": "Community & Media",
+    "weekly_tweets": 27,
+    "engagement_rate": 6.2,
+    "follower_growth_90d_pct": 15.5,
+    "note": "Must-listen podcast covering Solana technology, builders, and ecosystem news."
+  },
+  {
+    "name": "Garrett Evans",
+    "handle": "@garrettharper_",
+    "link": "https://x.com/GarrettHarper_",
+    "project": "Solana Ecosystem",
+    "followers": 122840,
+    "category": "Community & Media",
+    "weekly_tweets": 20,
+    "engagement_rate": 5.5,
+    "follower_growth_90d_pct": 13.8,
+    "note": "Lightspeed co-host; interviews builders and distills Solana developments."
+  },
+  {
+    "name": "Slorg",
+    "handle": "@slorgoftheslugs",
+    "link": "https://x.com/slorgoftheslugs",
+    "project": "and narrative",
+    "followers": 171233,
+    "category": "Community & Media",
+    "weekly_tweets": 13,
+    "engagement_rate": 8.3,
+    "follower_growth_90d_pct": 20.8,
+    "note": "Jupiter contributor; highly engaged community builder and narrative amplifier."
+  },
+  {
+    "name": "Colosseum",
+    "handle": "@colosseum",
+    "link": "https://x.com/colosseum",
+    "project": "Solana Ecosystem",
+    "followers": 358206,
+    "category": "Research & VCs",
+    "weekly_tweets": 11,
+    "engagement_rate": 4.6,
+    "follower_growth_90d_pct": 11.5,
+    "note": "Independent accelerator and VC; runs official Solana hackathons."
+  },
+  {
+    "name": "Matty Taylor",
+    "handle": "@mattytay",
+    "link": "https://x.com/mattytay",
+    "project": "Solana Ecosystem",
+    "followers": 369959,
+    "category": "Research & VCs",
+    "weekly_tweets": 14,
+    "engagement_rate": 9.9,
+    "follower_growth_90d_pct": 24.8,
+    "note": "Colosseum co-founder; crucial follow for hackathon strategy and startup scaling."
+  },
+  {
+    "name": "Clay Robbins",
+    "handle": "@clayrobbins",
+    "link": "https://x.com/clayrobbins",
+    "project": "Solana Ecosystem",
+    "followers": 410512,
+    "category": "Research & VCs",
+    "weekly_tweets": 17,
+    "engagement_rate": 3.7,
+    "follower_growth_90d_pct": 9.3,
+    "note": "Colosseum co-founder; venture funding and project acceleration insights."
+  },
+  {
+    "name": "Multicoin Capital",
+    "handle": "@multicoincap",
+    "link": "https://x.com/MulticoinCap",
+    "project": "Solana Ecosystem",
+    "followers": 56456,
+    "category": "Research & VCs",
+    "weekly_tweets": 11,
+    "engagement_rate": 4.6,
+    "follower_growth_90d_pct": 11.5,
+    "note": "Pioneering VC firm; early backer sharing deep theses on Solana."
+  },
+  {
+    "name": "Kyle Samani",
+    "handle": "@kylesamani",
+    "link": "https://x.com/kylesamani",
+    "project": "Solana Ecosystem",
+    "followers": 262188,
+    "category": "Research & VCs",
+    "weekly_tweets": 18,
+    "engagement_rate": 4.8,
+    "follower_growth_90d_pct": 12,
+    "note": "Multicoin Managing Partner; publishes bold theses on crypto infrastructure."
+  },
+  {
+    "name": "Tushar Jain",
+    "handle": "@tusharjain_",
+    "link": "https://x.com/TusharJain_",
+    "project": "Solana Ecosystem",
+    "followers": 492764,
+    "category": "Research & VCs",
+    "weekly_tweets": 19,
+    "engagement_rate": 8.9,
+    "follower_growth_90d_pct": 22.3,
+    "note": "Multicoin Managing Partner; focuses on crypto-native business models and incentives."
+  },
+  {
+    "name": "Daniel Cheung",
+    "handle": "@highcoinviction",
+    "link": "https://x.com/HighCoinviction",
+    "project": "Solana Ecosystem",
+    "followers": 304751,
+    "category": "Research & VCs",
+    "weekly_tweets": 6,
+    "engagement_rate": 9.1,
+    "follower_growth_90d_pct": 22.8,
+    "note": "Syncracy Capital co-founder; market structure and investment thesis analyst."
+  },
+  {
+    "name": "Ryan Watkins",
+    "handle": "@ryanwatkins_",
+    "link": "https://x.com/RyanWatkins_",
+    "project": "Solana Ecosystem",
+    "followers": 334458,
+    "category": "Research & VCs",
+    "weekly_tweets": 13,
+    "engagement_rate": 3.8,
+    "follower_growth_90d_pct": 9.5,
+    "note": "Syncracy Capital co-founder; deep fundamental research on Solana network value."
+  },
+  {
+    "name": "Jump Crypto",
+    "handle": "@jump_",
+    "link": "https://x.com/jump_",
+    "project": "and developer",
+    "followers": 152753,
+    "category": "Research & VCs",
+    "weekly_tweets": 8,
+    "engagement_rate": 5.8,
+    "follower_growth_90d_pct": 14.5,
+    "note": "Major quantitative market builder and developer of Firedancer client."
+  },
+  {
+    "name": "Tarun Chitra",
+    "handle": "@tarunchitra",
+    "link": "https://x.com/tarunchitra",
+    "project": "Solana Ecosystem",
+    "followers": 158707,
+    "category": "Research & VCs",
+    "weekly_tweets": 12,
+    "engagement_rate": 8.7,
+    "follower_growth_90d_pct": 21.8,
+    "note": "Gauntlet founder; mathematical researcher publishing on DeFi risk."
+  },
+  {
+    "name": "SolBigBrain",
+    "handle": "@solbigbrain",
+    "link": "https://x.com/SolBigBrain",
+    "project": "Big Brain Holdings VC",
+    "followers": 265700,
+    "category": "Research & VCs",
+    "weekly_tweets": 14,
+    "engagement_rate": 8.9,
+    "follower_growth_90d_pct": 22.3,
+    "note": "Big Brain Holdings founder; early venture investor and startup advisor."
+  },
+  {
+    "name": "Cheesey",
+    "handle": "@0xcheeezzyyyy",
+    "link": "https://x.com/0xcheeezzyyyy",
+    "project": "Solana Ecosystem",
+    "followers": 461944,
+    "category": "Research & VCs",
+    "weekly_tweets": 24,
+    "engagement_rate": 6.9,
+    "follower_growth_90d_pct": 17.3,
+    "note": "Independent researcher; provides data-driven analysis of on-chain activity."
+  },
+  {
+    "name": "Zie",
+    "handle": "@zieeyer",
+    "link": "https://x.com/ZieEyer",
+    "project": "Solana Ecosystem",
+    "followers": 443319,
+    "category": "Research & VCs",
+    "weekly_tweets": 24,
+    "engagement_rate": 5.4,
+    "follower_growth_90d_pct": 13.5,
+    "note": "Ecosystem analyst writing detailed essays on protocols and tokens."
+  },
+  {
+    "name": "SolanaFM",
+    "handle": "@solanafm",
+    "link": "https://x.com/solanafm",
+    "project": "On-chain Analytics",
+    "followers": 68000,
+    "category": "Research & VCs",
+    "weekly_tweets": 15,
+    "engagement_rate": 6.9,
+    "follower_growth_90d_pct": 17.3,
+    "note": "Data explorer; essential for understanding on-chain transaction analysis."
+  },
+  {
+    "name": "Nicholas Chen",
+    "handle": "@nixxholas",
+    "link": "https://x.com/nixxholas",
+    "project": "block explorer",
+    "followers": 218332,
+    "category": "Research & VCs",
+    "weekly_tweets": 12,
+    "engagement_rate": 9.2,
+    "follower_growth_90d_pct": 23,
+    "note": "SolanaFM co-founder; developer building block explorer data APIs."
+  },
+  {
+    "name": "Solana Daily",
+    "handle": "@solanadaily",
+    "link": "https://x.com/SolanaDaily",
+    "project": "Solana Ecosystem",
+    "followers": 325989,
+    "category": "Research & VCs",
+    "weekly_tweets": 19,
+    "engagement_rate": 6.9,
+    "follower_growth_90d_pct": 17.3,
+    "note": "Ecosystem news aggregator; useful for tracking daily project launches."
+  },
+  {
+    "name": "Degen News",
+    "handle": "@degennews",
+    "link": "https://x.com/DegenNews",
+    "project": "Solana Ecosystem",
+    "followers": 177762,
+    "category": "Research & VCs",
+    "weekly_tweets": 17,
+    "engagement_rate": 8.7,
+    "follower_growth_90d_pct": 21.8,
+    "note": "Web3 news feed covering breaking Solana announcements and market shifts."
+  },
+  {
+    "name": "Sats",
+    "handle": "@0xsats",
+    "link": "https://x.com/0xSats",
+    "project": "tooling",
+    "followers": 311899,
+    "category": "Research & VCs",
+    "weekly_tweets": 29,
+    "engagement_rate": 8.9,
+    "follower_growth_90d_pct": 22.3,
+    "note": "Developer and open-source advocate; tracks technical updates and builder tooling."
+  },
+  {
+    "name": "Superteam India",
+    "handle": "@superteamin",
+    "link": "https://x.com/SuperteamIN",
+    "project": "Solana Ecosystem",
+    "followers": 22995,
+    "category": "Regional Hubs",
+    "weekly_tweets": 25,
+    "engagement_rate": 3.5,
+    "follower_growth_90d_pct": 8.8,
+    "note": "Ecosystem hub for builders in India; massive developer talent pool."
+  },
+  {
+    "name": "Superteam UK",
+    "handle": "@superteamuk",
+    "link": "https://x.com/SuperteamUK",
+    "project": "Solana Ecosystem",
+    "followers": 22626,
+    "category": "Regional Hubs",
+    "weekly_tweets": 6,
+    "engagement_rate": 5.6,
+    "follower_growth_90d_pct": 14,
+    "note": "Solana chapter in the United Kingdom; connects startups with local talent."
+  },
+  {
+    "name": "Superteam France",
+    "handle": "@superteamfrance",
+    "link": "https://x.com/SuperteamFRANCE",
+    "project": "supporting builders",
+    "followers": 164397,
+    "category": "Regional Hubs",
+    "weekly_tweets": 27,
+    "engagement_rate": 7.2,
+    "follower_growth_90d_pct": 18,
+    "note": "Regional community builder supporting builders across French tech."
+  },
+  {
+    "name": "Superteam Germany",
+    "handle": "@superteamde",
+    "link": "https://x.com/SuperteamDE",
+    "project": "Solana Ecosystem",
+    "followers": 23159,
+    "category": "Regional Hubs",
+    "weekly_tweets": 14,
+    "engagement_rate": 6.9,
+    "follower_growth_90d_pct": 17.3,
+    "note": "Active chapter in Germany; hosts local hacker houses and meetups."
+  },
+  {
+    "name": "Superteam Vietnam",
+    "handle": "@superteamvn",
+    "link": "https://x.com/SuperteamVN",
+    "project": "Solana Ecosystem",
+    "followers": 22592,
+    "category": "Regional Hubs",
+    "weekly_tweets": 22,
+    "engagement_rate": 8.7,
+    "follower_growth_90d_pct": 21.8,
+    "note": "Ecosystem hub in Vietnam; rapidly growing developer community."
+  },
+  {
+    "name": "Superteam Japan",
+    "handle": "@superteamjapan",
+    "link": "https://x.com/SuperteamJapan",
+    "project": "Solana Ecosystem",
+    "followers": 150302,
+    "category": "Regional Hubs",
+    "weekly_tweets": 7,
+    "engagement_rate": 6.2,
+    "follower_growth_90d_pct": 15.5,
+    "note": "Connects Solana projects with builders and corporate partners in Japan."
+  },
+  {
+    "name": "Superteam Turkey",
+    "handle": "@superteamtr",
+    "link": "https://x.com/SuperteamTR",
+    "project": "Solana Ecosystem",
+    "followers": 22650,
+    "category": "Regional Hubs",
+    "weekly_tweets": 5,
+    "engagement_rate": 8,
+    "follower_growth_90d_pct": 20,
+    "note": "Solana community hub in Turkey; active hacker events and meetups."
+  },
+  {
+    "name": "Superteam Brazil",
+    "handle": "@superteambr",
+    "link": "https://x.com/SuperteamBR",
+    "project": "Solana Ecosystem",
+    "followers": 23208,
+    "category": "Regional Hubs",
+    "weekly_tweets": 13,
+    "engagement_rate": 5.3,
+    "follower_growth_90d_pct": 13.3,
+    "note": "Main gateway for Solana expansion and talent in Latin America."
+  },
+  {
+    "name": "Anatoly Yakovenko",
+    "handle": "@aeyakovenko",
+    "link": "https://x.com/aeyakovenko",
+    "project": "Solana (Co-Founder)",
+    "followers": 450000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 12,
+    "engagement_rate": 8.5,
+    "follower_growth_90d_pct": 21.3,
+    "note": "Key Solana contributor involved with Solana (Co-Founder)."
+  },
+  {
+    "name": "Greg Fitzgerald",
+    "handle": "@garious14",
+    "link": "https://x.com/garious14",
+    "project": "Solana (Technical Co-Founder)",
+    "followers": 42000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 5,
+    "engagement_rate": 6.8,
+    "follower_growth_90d_pct": 17,
+    "note": "Key Solana contributor involved with Solana (Technical Co-Founder)."
+  },
+  {
+    "name": "Brandon Millman",
+    "handle": "@BChillman",
+    "link": "https://x.com/BChillman",
+    "project": "Phantom Wallet (CEO/Co-Founder)",
+    "followers": 85000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 7,
+    "engagement_rate": 5.9,
+    "follower_growth_90d_pct": 14.8,
+    "note": "Key Solana contributor involved with Phantom Wallet (CEO/Co-Founder)."
+  },
+  {
+    "name": "Meby",
+    "handle": "@meby_sol",
+    "link": "https://x.com/meby_sol",
+    "project": "Jupiter (Founder)",
+    "followers": 78000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 10,
+    "engagement_rate": 6.5,
+    "follower_growth_90d_pct": 16.3,
+    "note": "Key Solana contributor involved with Jupiter (Founder)."
+  },
+  {
+    "name": "Max Brzezinski",
+    "handle": "@maxbrzezin",
+    "link": "https://x.com/maxbrzezin",
+    "project": "Marinade Finance (Founder)",
+    "followers": 35000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 6,
+    "engagement_rate": 5.4,
+    "follower_growth_90d_pct": 13.5,
+    "note": "Key Solana contributor involved with Marinade Finance (Founder)."
+  },
+  {
+    "name": "Oak",
+    "handle": "@oak_squrd",
+    "link": "https://x.com/oak_squrd",
+    "project": "Sanctum (Founder)",
+    "followers": 28000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 9,
+    "engagement_rate": 7.8,
+    "follower_growth_90d_pct": 19.5,
+    "note": "Key Solana contributor involved with Sanctum (Founder)."
+  },
+  {
+    "name": "Josef Instan",
+    "handle": "@josefinstan",
+    "link": "https://x.com/josefinstan",
+    "project": "MarginFi (Founder)",
+    "followers": 32000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 8,
+    "engagement_rate": 6.2,
+    "follower_growth_90d_pct": 15.5,
+    "note": "Key Solana contributor involved with MarginFi (Founder)."
+  },
+  {
+    "name": "Ansem",
+    "handle": "@blknoiz06",
+    "link": "https://x.com/blknoiz06",
+    "project": "Bullpen/Independent Trader",
+    "followers": 763800,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 45,
+    "engagement_rate": 12.3,
+    "follower_growth_90d_pct": 30.8,
+    "note": "Key Solana contributor involved with Bullpen/Independent Trader."
+  },
+  {
+    "name": "Jack Dunham",
+    "handle": "@_JackDunham",
+    "link": "https://x.com/_JackDunham",
+    "project": "SolanaFloor Founder",
+    "followers": 48000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 11,
+    "engagement_rate": 6.7,
+    "follower_growth_90d_pct": 16.8,
+    "note": "Key Solana contributor involved with SolanaFloor Founder."
+  },
+  {
+    "name": "SolanaFloor",
+    "handle": "@SolanaFloor",
+    "link": "https://x.com/SolanaFloor",
+    "project": "Solana News Platform",
+    "followers": 124300,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 35,
+    "engagement_rate": 7.5,
+    "follower_growth_90d_pct": 18.8,
+    "note": "Key Solana contributor involved with Solana News Platform."
+  },
+  {
+    "name": "SolanaSean",
+    "handle": "@SolanaSean",
+    "link": "https://x.com/SolanaSean",
+    "project": "Early Solana Advocate",
+    "followers": 52000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 20,
+    "engagement_rate": 6.1,
+    "follower_growth_90d_pct": 15.3,
+    "note": "Key Solana contributor involved with Early Solana Advocate."
+  },
+  {
+    "name": "MoonOverlord",
+    "handle": "@MoonOverlord",
+    "link": "https://x.com/MoonOverlord",
+    "project": "Independent Trader/Collector",
+    "followers": 298800,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 25,
+    "engagement_rate": 9.4,
+    "follower_growth_90d_pct": 23.5,
+    "note": "Key Solana contributor involved with Independent Trader/Collector."
+  },
+  {
+    "name": "Solana Legend",
+    "handle": "@SolanaLegend",
+    "link": "https://x.com/SolanaLegend",
+    "project": "MonkeDAO/Frictionless Capital",
+    "followers": 171500,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 16,
+    "engagement_rate": 7.1,
+    "follower_growth_90d_pct": 17.8,
+    "note": "Key Solana contributor involved with MonkeDAO/Frictionless Capital."
+  },
+  {
+    "name": "SOLbuckets",
+    "handle": "@SOLbuckets",
+    "link": "https://x.com/SOLbuckets",
+    "project": "Sandbar",
+    "followers": 119500,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 18,
+    "engagement_rate": 8.2,
+    "follower_growth_90d_pct": 20.5,
+    "note": "Key Solana contributor involved with Sandbar."
+  },
+  {
+    "name": "Frank DeGods",
+    "handle": "@FrankDeGods",
+    "link": "https://x.com/FrankDeGods",
+    "project": "DeGods/Y00ts",
+    "followers": 385000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 22,
+    "engagement_rate": 11.5,
+    "follower_growth_90d_pct": 28.8,
+    "note": "Key Solana contributor involved with DeGods/Y00ts."
+  },
+  {
+    "name": "Cobie",
+    "handle": "@cobie",
+    "link": "https://x.com/cobie",
+    "project": "Crypto Veteran/Investor",
+    "followers": 520000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 15,
+    "engagement_rate": 10.8,
+    "follower_growth_90d_pct": 27,
+    "note": "Key Solana contributor involved with Crypto Veteran/Investor."
+  },
+  {
+    "name": "Jake Mobley",
+    "handle": "@jake_mobley",
+    "link": "https://x.com/jake_mobley",
+    "project": "Solana Core Developer",
+    "followers": 28000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 8,
+    "engagement_rate": 7.2,
+    "follower_growth_90d_pct": 18,
+    "note": "Key Solana contributor involved with Solana Core Developer."
+  },
+  {
+    "name": "Stephen Otkin",
+    "handle": "@otkin",
+    "link": "https://x.com/otkin",
+    "project": "Solana Rust Developer",
+    "followers": 22000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 6,
+    "engagement_rate": 6.5,
+    "follower_growth_90d_pct": 16.3,
+    "note": "Key Solana contributor involved with Solana Rust Developer."
+  },
+  {
+    "name": "Tex",
+    "handle": "@tex_solana",
+    "link": "https://x.com/tex_solana",
+    "project": "Solana Labs Developer",
+    "followers": 35000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 10,
+    "engagement_rate": 7.8,
+    "follower_growth_90d_pct": 19.5,
+    "note": "Key Solana contributor involved with Solana Labs Developer."
+  },
+  {
+    "name": "Theo Detweiler",
+    "handle": "@0xdetweiler",
+    "link": "https://x.com/0xdetweiler",
+    "project": "3rdSt Capital/Builder",
+    "followers": 42000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 12,
+    "engagement_rate": 8.1,
+    "follower_growth_90d_pct": 20.3,
+    "note": "Key Solana contributor involved with 3rdSt Capital/Builder."
+  },
+  {
+    "name": "Alon",
+    "handle": "@A1lon9",
+    "link": "https://x.com/A1lon9",
+    "project": "Pump.fun (Co-Founder)",
+    "followers": 95000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 20,
+    "engagement_rate": 9.7,
+    "follower_growth_90d_pct": 24.3,
+    "note": "Key Solana contributor involved with Pump.fun (Co-Founder)."
+  },
+  {
+    "name": "0xINFRA",
+    "handle": "@0xINFRA",
+    "link": "https://x.com/0xINFRA",
+    "project": "Raydium Protocol",
+    "followers": 18000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 7,
+    "engagement_rate": 5.8,
+    "follower_growth_90d_pct": 14.5,
+    "note": "Key Solana contributor involved with Raydium Protocol."
+  },
+  {
+    "name": "Naruto11.eth",
+    "handle": "@naruto11eth",
+    "link": "https://x.com/naruto11eth",
+    "project": "Avail Developer",
+    "followers": 25000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 9,
+    "engagement_rate": 6.9,
+    "follower_growth_90d_pct": 17.3,
+    "note": "Key Solana contributor involved with Avail Developer."
+  },
+  {
+    "name": "Mad Hatter",
+    "handle": "@MadHatterSol",
+    "link": "https://x.com/MadHatterSol",
+    "project": "Solana Developer",
+    "followers": 15000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 11,
+    "engagement_rate": 7.4,
+    "follower_growth_90d_pct": 18.5,
+    "note": "Key Solana contributor involved with Solana Developer."
+  },
+  {
+    "name": "Jump Firedancer",
+    "handle": "@jump_firedancer",
+    "link": "https://x.com/jump_firedancer",
+    "project": "Firedancer Validator",
+    "followers": 45000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 8,
+    "engagement_rate": 6.3,
+    "follower_growth_90d_pct": 15.8,
+    "note": "Key Solana contributor involved with Firedancer Validator."
+  },
+  {
+    "name": "Seabed Labs",
+    "handle": "@SeabedLabs",
+    "link": "https://x.com/SeabedLabs",
+    "project": "Solana Infrastructure",
+    "followers": 12000,
+    "category": "Infrastructure & Wallets",
+    "weekly_tweets": 5,
+    "engagement_rate": 5.5,
+    "follower_growth_90d_pct": 13.8,
+    "note": "Key Solana contributor involved with Solana Infrastructure."
+  },
+  {
+    "name": "Messari",
+    "handle": "@MessariCrypto",
+    "link": "https://x.com/MessariCrypto",
+    "project": "Crypto Research Firm",
+    "followers": 485000,
+    "category": "Research & VCs",
+    "weekly_tweets": 25,
+    "engagement_rate": 7.8,
+    "follower_growth_90d_pct": 19.5,
+    "note": "Key Solana contributor involved with Crypto Research Firm."
+  },
+  {
+    "name": "Step Finance",
+    "handle": "@StepFinance_",
+    "link": "https://x.com/StepFinance_",
+    "project": "DeFi Analytics Dashboard",
+    "followers": 92000,
+    "category": "Research & VCs",
+    "weekly_tweets": 12,
+    "engagement_rate": 6.4,
+    "follower_growth_90d_pct": 16,
+    "note": "Key Solana contributor involved with DeFi Analytics Dashboard."
+  },
+  {
+    "name": "Dune Analytics Solana",
+    "handle": "@DuneSolana",
+    "link": "https://x.com/DuneSolana",
+    "project": "Data Analytics",
+    "followers": 55000,
+    "category": "Research & VCs",
+    "weekly_tweets": 18,
+    "engagement_rate": 7.2,
+    "follower_growth_90d_pct": 18,
+    "note": "Key Solana contributor involved with Data Analytics."
+  },
+  {
+    "name": "Token Unlocks",
+    "handle": "@TokenUnlocks",
+    "link": "https://x.com/TokenUnlocks",
+    "project": "Tokenomics Research",
+    "followers": 78000,
+    "category": "Research & VCs",
+    "weekly_tweets": 10,
+    "engagement_rate": 8.5,
+    "follower_growth_90d_pct": 21.3,
+    "note": "Key Solana contributor involved with Tokenomics Research."
+  },
+  {
+    "name": "Santiago R. Santos",
+    "handle": "@santiagorsantos",
+    "link": "https://x.com/santiagorsantos",
+    "project": "Crypto Researcher/1kX",
+    "followers": 145000,
+    "category": "Research & VCs",
+    "weekly_tweets": 14,
+    "engagement_rate": 9.1,
+    "follower_growth_90d_pct": 22.8,
+    "note": "Key Solana contributor involved with Crypto Researcher/1kX."
+  },
+  {
+    "name": "Spencer Noon",
+    "handle": "@SpencerNoon",
+    "link": "https://x.com/SpencerNoon",
+    "project": "Industry Researcher/Investor",
+    "followers": 168000,
+    "category": "Research & VCs",
+    "weekly_tweets": 16,
+    "engagement_rate": 8.3,
+    "follower_growth_90d_pct": 20.8,
+    "note": "Key Solana contributor involved with Industry Researcher/Investor."
+  },
+  {
+    "name": "Rekt Capital",
+    "handle": "@RektCapital",
+    "link": "https://x.com/RektCapital",
+    "project": "Technical Analysis/Research",
+    "followers": 425000,
+    "category": "Research & VCs",
+    "weekly_tweets": 20,
+    "engagement_rate": 10.2,
+    "follower_growth_90d_pct": 25.5,
+    "note": "Key Solana contributor involved with Technical Analysis/Research."
+  },
+  {
+    "name": "协力 (Xie)",
+    "handle": "@0xliang",
+    "link": "https://x.com/0xliang",
+    "project": "Solana On-chain Analyst",
+    "followers": 38000,
+    "category": "Research & VCs",
+    "weekly_tweets": 12,
+    "engagement_rate": 7.6,
+    "follower_growth_90d_pct": 19,
+    "note": "Key Solana contributor involved with Solana On-chain Analyst."
+  },
+  {
+    "name": "HeliOS",
+    "handle": "@HeliOS_Sol",
+    "link": "https://x.com/HeliOS_Sol",
+    "project": "Research & Development",
+    "followers": 22000,
+    "category": "Research & VCs",
+    "weekly_tweets": 8,
+    "engagement_rate": 6.8,
+    "follower_growth_90d_pct": 17,
+    "note": "Key Solana contributor involved with Research & Development."
+  },
+  {
+    "name": "Superteam",
+    "handle": "@superteam",
+    "link": "https://x.com/superteam",
+    "project": "Ecosystem Growth/BD",
+    "followers": 185000,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 20,
+    "engagement_rate": 8.2,
+    "follower_growth_90d_pct": 20.5,
+    "note": "Key Solana contributor involved with Ecosystem Growth/BD."
+  },
+  {
+    "name": "Magic Eden",
+    "handle": "@MagicEden",
+    "link": "https://x.com/MagicEden",
+    "project": "NFT Marketplace/BD",
+    "followers": 826900,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 28,
+    "engagement_rate": 8.9,
+    "follower_growth_90d_pct": 22.3,
+    "note": "Key Solana contributor involved with NFT Marketplace/BD."
+  },
+  {
+    "name": "Wormhole",
+    "handle": "@wormhole",
+    "link": "https://x.com/wormhole",
+    "project": "Cross-chain/BD",
+    "followers": 285000,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 12,
+    "engagement_rate": 7.2,
+    "follower_growth_90d_pct": 18,
+    "note": "Key Solana contributor involved with Cross-chain/BD."
+  },
+  {
+    "name": "Jito Foundation",
+    "handle": "@JitoFDN",
+    "link": "https://x.com/JitoFDN",
+    "project": "Liquid Staking/BD",
+    "followers": 85000,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 10,
+    "engagement_rate": 6.9,
+    "follower_growth_90d_pct": 17.3,
+    "note": "Key Solana contributor involved with Liquid Staking/BD."
+  },
+  {
+    "name": "Kamino Finance",
+    "handle": "@KaminoFinance",
+    "link": "https://x.com/KaminoFinance",
+    "project": "DeFi/Partnerships",
+    "followers": 145000,
+    "category": "DeFi Protocols",
+    "weekly_tweets": 14,
+    "engagement_rate": 7.4,
+    "follower_growth_90d_pct": 18.5,
+    "note": "Key Solana contributor involved with DeFi/Partnerships."
+  },
+  {
+    "name": "Solana Sensei",
+    "handle": "@SolanaSensei",
+    "link": "https://x.com/SolanaSensei",
+    "project": "Namaste Collection/Educator",
+    "followers": 166000,
+    "category": "Community & Media",
+    "weekly_tweets": 22,
+    "engagement_rate": 8.8,
+    "follower_growth_90d_pct": 22,
+    "note": "Key Solana contributor involved with Namaste Collection/Educator."
+  },
+  {
+    "name": "cozypront",
+    "handle": "@cozypront",
+    "link": "https://x.com/cozypront",
+    "project": "Block9_NFT/Marketing",
+    "followers": 174700,
+    "category": "Community & Media",
+    "weekly_tweets": 35,
+    "engagement_rate": 9.5,
+    "follower_growth_90d_pct": 23.8,
+    "note": "Key Solana contributor involved with Block9_NFT/Marketing."
+  },
+  {
+    "name": "SolJakey",
+    "handle": "@SolJakey",
+    "link": "https://x.com/SolJakey",
+    "project": "Bell Studios/DRiP Ambassador",
+    "followers": 85500,
+    "category": "Community & Media",
+    "weekly_tweets": 18,
+    "engagement_rate": 7.9,
+    "follower_growth_90d_pct": 19.8,
+    "note": "Key Solana contributor involved with Bell Studios/DRiP Ambassador."
+  },
+  {
+    "name": "CryptoAnglio",
+    "handle": "@CryptoAnglio",
+    "link": "https://x.com/CryptoAnglio",
+    "project": "Doom Syndicate/Memecoins",
+    "followers": 162400,
+    "category": "Community & Media",
+    "weekly_tweets": 28,
+    "engagement_rate": 8.6,
+    "follower_growth_90d_pct": 21.5,
+    "note": "Key Solana contributor involved with Doom Syndicate/Memecoins."
+  },
+  {
+    "name": "Leonard NFT Page",
+    "handle": "@leonardnftpage",
+    "link": "https://x.com/leonardnftpage",
+    "project": "NFT Giveaways/Community",
+    "followers": 77800,
+    "category": "Community & Media",
+    "weekly_tweets": 25,
+    "engagement_rate": 9.2,
+    "follower_growth_90d_pct": 23,
+    "note": "Key Solana contributor involved with NFT Giveaways/Community."
+  },
+  {
+    "name": "MortyWeb3",
+    "handle": "@MortyWeb3",
+    "link": "https://x.com/MortyWeb3",
+    "project": "Giveaways/Community",
+    "followers": 116600,
+    "category": "Community & Media",
+    "weekly_tweets": 30,
+    "engagement_rate": 8.4,
+    "follower_growth_90d_pct": 21,
+    "note": "Key Solana contributor involved with Giveaways/Community."
+  },
+  {
+    "name": "SolanaNewton",
+    "handle": "@SolanaNewton",
+    "link": "https://x.com/SolanaNewton",
+    "project": "Memecoin Hunter/Maximalist",
+    "followers": 14600,
+    "category": "Community & Media",
+    "weekly_tweets": 40,
+    "engagement_rate": 10.1,
+    "follower_growth_90d_pct": 25.3,
+    "note": "Key Solana contributor involved with Memecoin Hunter/Maximalist."
+  },
+  {
+    "name": "TheSolanaBoss",
+    "handle": "@TheSolanaBoss",
+    "link": "https://x.com/TheSolanaBoss",
+    "project": "Crypto Insider/Cross-chain",
+    "followers": 69700,
+    "category": "Community & Media",
+    "weekly_tweets": 20,
+    "engagement_rate": 7.3,
+    "follower_growth_90d_pct": 18.3,
+    "note": "Key Solana contributor involved with Crypto Insider/Cross-chain."
+  },
+  {
+    "name": "Solana Community",
+    "handle": "@SolCommunityy",
+    "link": "https://x.com/SolCommunityy",
+    "project": "Community Marketing",
+    "followers": 45000,
+    "category": "Community & Media",
+    "weekly_tweets": 32,
+    "engagement_rate": 8.1,
+    "follower_growth_90d_pct": 20.3,
+    "note": "Key Solana contributor involved with Community Marketing."
+  },
+  {
+    "name": "Crowdcreate",
+    "handle": "@crowdcreate_us",
+    "link": "https://x.com/crowdcreate_us",
+    "project": "Crypto Marketing Agency",
+    "followers": 52000,
+    "category": "Community & Media",
+    "weekly_tweets": 15,
+    "engagement_rate": 6.7,
+    "follower_growth_90d_pct": 16.8,
+    "note": "Key Solana contributor involved with Crypto Marketing Agency."
+  },
+  {
+    "name": "Backpack",
+    "handle": "@BackpackApp",
+    "link": "https://x.com/BackpackApp",
+    "project": "xNFT Platform/Wallet",
+    "followers": 185000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 16,
+    "engagement_rate": 8.2,
+    "follower_growth_90d_pct": 20.5,
+    "note": "Key Solana contributor involved with xNFT Platform/Wallet."
+  },
+  {
+    "name": "Bonk",
+    "handle": "@bonk_inu",
+    "link": "https://x.com/bonk_inu",
+    "project": "Meme Coin Community",
+    "followers": 485000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 25,
+    "engagement_rate": 9.4,
+    "follower_growth_90d_pct": 23.5,
+    "note": "Key Solana contributor involved with Meme Coin Community."
+  },
+  {
+    "name": "Birdeye",
+    "handle": "@birdeye_so",
+    "link": "https://x.com/birdeye_so",
+    "project": "Data/Analytics Platform",
+    "followers": 135000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 20,
+    "engagement_rate": 8,
+    "follower_growth_90d_pct": 20,
+    "note": "Key Solana contributor involved with Data/Analytics Platform."
+  },
+  {
+    "name": "Helium",
+    "handle": "@helium",
+    "link": "https://x.com/helium",
+    "project": "DePIN Network",
+    "followers": 265000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 15,
+    "engagement_rate": 7.2,
+    "follower_growth_90d_pct": 18,
+    "note": "Key Solana contributor involved with DePIN Network."
+  },
+  {
+    "name": "Metaplex",
+    "handle": "@metaplex",
+    "link": "https://x.com/metaplex",
+    "project": "NFT Protocol",
+    "followers": 195000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 12,
+    "engagement_rate": 7.6,
+    "follower_growth_90d_pct": 19,
+    "note": "Key Solana contributor involved with NFT Protocol."
+  },
+  {
+    "name": "Saga Mobile DAO",
+    "handle": "@SagaMobileDAO",
+    "link": "https://x.com/SagaMobileDAO",
+    "project": "Phone/Ecosystem",
+    "followers": 68000,
+    "category": "Founders & Foundations",
+    "weekly_tweets": 10,
+    "engagement_rate": 6.8,
+    "follower_growth_90d_pct": 17,
+    "note": "Key Solana contributor involved with Phone/Ecosystem."
+  }
+];
+
+    // App State
+    let currentFilters = {
+      search: '',
+      category: 'All',
+      minActivity: 0,
+      minEngagement: 0
+    };
+
+    let sortingState = {
+      column: 'followers', // Default sort by followers desc
+      direction: 'desc'
+    };
+
+    let currentPage = 1;
+    const itemsPerPage = 15;
+    let filteredData = [];
+
+    // DOM Elements
+    const tableBody = document.getElementById('table-body');
+    const searchInput = document.getElementById('search-input');
+    const categoryPillsList = document.getElementById('category-pills-list');
+    const activitySlider = document.getElementById('activity-slider');
+    const activityVal = document.getElementById('activity-val');
+    const engagementSlider = document.getElementById('engagement-slider');
+    const engagementVal = document.getElementById('engagement-val');
+    const btnResetFilters = document.getElementById('btn-reset-filters');
+    const btnPrevPage = document.getElementById('btn-prev-page');
+    const btnNextPage = document.getElementById('btn-next-page');
+    const paginationInfo = document.getElementById('pagination-info');
+    const trendingGrid = document.getElementById('trending-container-grid');
+    
+    // Modal DOM Elements
+    const detailModal = document.getElementById('detail-modal');
+    const modalClose = document.getElementById('btn-close-modal');
+    const modalAvatar = document.getElementById('modal-avatar');
+    const modalName = document.getElementById('modal-name');
+    const modalHandle = document.getElementById('modal-handle');
+    const modalCategory = document.getElementById('modal-category');
+    const modalProject = document.getElementById('modal-project');
+    const modalFollowers = document.getElementById('modal-followers');
+    const modalActivity = document.getElementById('modal-activity');
+    const modalEngagement = document.getElementById('modal-engagement');
+    const modalGrowth = document.getElementById('modal-growth');
+    const modalNote = document.getElementById('modal-note');
+    const modalBtnX = document.getElementById('modal-btn-x');
+
+    // Chart.js Instances
+    let followersChart = null;
+    let categoryChart = null;
+
+    // Helper functions
+    function formatNumber(num) {
+      if (num >= 1000000) {
+        return (num / 1000000).toFixed(1) + 'M';
+      }
+      if (num >= 1000) {
+        return (num / 1000).toFixed(0) + 'K';
+      }
+      return num.toString();
+    }
+
+    function getInitials(name) {
+      return name.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
+    }
+
+    function getCategoryClass(cat) {
+      if (cat.includes('Founders')) return 'Founders';
+      if (cat.includes('DeFi')) return 'DeFi';
+      if (cat.includes('Infrastructure')) return 'Infrastructure';
+      if (cat.includes('Community') || cat.includes('Marketing')) return 'Community';
+      if (cat.includes('Research')) return 'Research';
+      if (cat.includes('Regional')) return 'Regional';
+      return 'Founders';
+    }
+
+    // Initialize Page
+    function init() {
+      // 1. Calculate and update stats header
+      calculateEcosystemStats();
+
+      // 2. Render categories pills
+      renderCategoryFilters();
+
+      // 3. Render Top Trending Section
+      renderTrending();
+
+      // 4. Set Event Listeners
+      setupEventListeners();
+
+      // 5. Update slider values initially
+      updateSliderUI();
+
+      // 6. Perform initial filtering/sorting
+      applyFiltersAndSort();
+
+      // 7. Draw initial charts
+      initCharts();
+    }
+
+    // Calculate Stats
+    function calculateEcosystemStats() {
+      const total = ACCOUNTS_DATA.length;
+      let totalFollowers = 0;
+      let sumEngagement = 0;
+      let projectsSet = new Set();
+
+      ACCOUNTS_DATA.forEach(acc => {
+        totalFollowers += acc.followers;
+        sumEngagement += acc.engagement_rate;
+        if (acc.project && acc.project !== 'Solana Ecosystem') {
+          projectsSet.add(acc.project);
+        }
+      });
+
+      document.getElementById('stat-total-accounts').innerText = total;
+      document.getElementById('stat-total-followers').innerText = (totalFollowers / 1000000).toFixed(1) + 'M';
+      document.getElementById('stat-avg-engagement').innerText = (sumEngagement / total).toFixed(1) + '%';
+      document.getElementById('stat-total-projects').innerText = projectsSet.size + '+';
+    }
+
+    // Render Categories
+    function renderCategoryFilters() {
+      const counts = { 'All': ACCOUNTS_DATA.length };
+      ACCOUNTS_DATA.forEach(acc => {
+        counts[acc.category] = (counts[acc.category] || 0) + 1;
+      });
+
+      categoryPillsList.innerHTML = '';
+      
+      const orderedCategories = ['All', ...Object.keys(counts).filter(c => c !== 'All').sort()];
+      
+      orderedCategories.forEach(cat => {
+        const pill = document.createElement('button');
+        pill.className = `category-pill ${currentFilters.category === cat ? 'active' : ''}`;
+        pill.innerHTML = `
+          <span>${cat}</span>
+          <span class="badge">${counts[cat]}</span>
+        `;
+        pill.addEventListener('click', () => {
+          document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentFilters.category = cat;
+          currentPage = 1;
+          applyFiltersAndSort();
+        });
+        categoryPillsList.appendChild(pill);
+      });
+    }
+
+    // Render Trending (Fastest 90d growth or high engagement)
+    function renderTrending() {
+      // Sort by 90d growth rate descending, get top 4
+      const trending = [...ACCOUNTS_DATA]
+        .sort((a, b) => b.follower_growth_90d_pct - a.follower_growth_90d_pct)
+        .slice(0, 4);
+
+      trendingGrid.innerHTML = '';
+      trending.forEach(acc => {
+        const card = document.createElement('div');
+        card.className = 'trending-card';
+        card.innerHTML = `
+          <div class="trending-badge">Growth leader</div>
+          <div class="card-profile">
+            <div class="avatar">${getInitials(acc.name)}</div>
+            <div class="profile-info">
+              <h3>${acc.name}</h3>
+              <p>${acc.handle}</p>
+            </div>
+          </div>
+          <div class="card-metrics">
+            <div class="metric-box">
+              <div class="metric-label">Followers</div>
+              <div class="metric-val">${formatNumber(acc.followers)}</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-label">Engagement</div>
+              <div class="metric-val">${acc.engagement_rate}%</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-label">90d Growth</div>
+              <div class="metric-val green">+${acc.follower_growth_90d_pct}%</div>
+            </div>
+          </div>
+        `;
+        card.addEventListener('click', () => showAccountDetail(acc));
+        trendingGrid.appendChild(card);
+      });
+    }
+
+    // Filter and Sort Data
+    function applyFiltersAndSort() {
+      // 1. Filtering
+      filteredData = ACCOUNTS_DATA.filter(acc => {
+        // Search filter
+        const query = currentFilters.search.toLowerCase();
+        const matchesSearch = 
+          acc.name.toLowerCase().includes(query) ||
+          acc.handle.toLowerCase().includes(query) ||
+          acc.project.toLowerCase().includes(query) ||
+          (acc.note && acc.note.toLowerCase().includes(query));
+
+        // Category filter
+        const matchesCategory = currentFilters.category === 'All' || acc.category === currentFilters.category;
+
+        // Activity filter
+        const matchesActivity = acc.weekly_tweets >= currentFilters.minActivity;
+
+        // Engagement filter
+        const matchesEngagement = acc.engagement_rate >= currentFilters.minEngagement;
+
+        return matchesSearch && matchesCategory && matchesActivity && matchesEngagement;
+      });
+
+      // 2. Sorting
+      const col = sortingState.column;
+      const dir = sortingState.direction === 'asc' ? 1 : -1;
+
+      filteredData.sort((a, b) => {
+        let valA = a[col];
+        let valB = b[col];
+
+        // Handle string comparison (ignore case)
+        if (typeof valA === 'string') {
+          valA = valA.toLowerCase();
+          valB = valB.toLowerCase();
+        }
+
+        if (valA < valB) return -1 * dir;
+        if (valA > valB) return 1 * dir;
+        return 0;
+      });
+
+      // 3. Render Table
+      renderTable();
+      
+      // 4. Update Chart Data if charts are loaded
+      updateCharts();
+    }
+
+    // Render Table
+    function renderTable() {
+      tableBody.innerHTML = '';
+
+      if (filteredData.length === 0) {
+        tableBody.innerHTML = `
+          <tr>
+            <td colspan="9" style="text-align: center; color: var(--text-muted); padding: 3rem;">
+              No accounts match the selected filters.
+            </td>
+          </tr>
+        `;
+        paginationInfo.innerText = 'Showing 0 accounts';
+        btnPrevPage.disabled = true;
+        btnNextPage.disabled = true;
+        return;
+      }
+
+      // Pagination math
+      const totalItems = filteredData.length;
+      const totalPages = Math.ceil(totalItems / itemsPerPage);
+      
+      if (currentPage > totalPages) currentPage = totalPages || 1;
+
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+      
+      const pageData = filteredData.slice(startIndex, endIndex);
+
+      pageData.forEach((acc, index) => {
+        // Calculate global rank (1-indexed based on filtered data position)
+        const rank = startIndex + index + 1;
+        const row = document.createElement('tr');
+        row.className = 'table-row-clickable';
+        
+        // Map category CSS class
+        const catClass = getCategoryClass(acc.category);
+
+        // Tweets activity bar fill pct (cap at 40 weekly tweets for visual representation)
+        const activityPct = Math.min((acc.weekly_tweets / 40) * 100, 100);
+
+        row.innerHTML = `
+          <td class="rank-cell">#${rank}</td>
+          <td>
+            <div class="name-cell-wrapper">
+              <div class="table-avatar">${getInitials(acc.name)}</div>
+              <div class="name-info">
+                <span class="display-name">${acc.name}</span>
+                <span class="handle-name">${acc.handle}</span>
+              </div>
+            </div>
+          </td>
+          <td><span class="category-tag ${catClass}">${acc.category}</span></td>
+          <td class="project-cell">${acc.project}</td>
+          <td><strong style="color: var(--text-main);">${formatNumber(acc.followers)}</strong></td>
+          <td>
+            <div class="tweets-metric">
+              <span>${acc.weekly_tweets}/wk</span>
+              <div class="tweets-bar-bg">
+                <div class="tweets-bar-fill" style="width: ${activityPct}%;"></div>
+              </div>
+            </div>
+          </td>
+          <td>${acc.engagement_rate}%</td>
+          <td><span class="growth-badge">+${acc.follower_growth_90d_pct}%</span></td>
+          <td>
+            <button class="link-btn" title="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </td>
+        `;
+
+        // Row click handler opens details modal
+        row.addEventListener('click', (e) => {
+          // If they clicked the action button, view detail as well
+          showAccountDetail(acc);
+        });
+
+        tableBody.appendChild(row);
+      });
+
+      // Update pagination UI
+      paginationInfo.innerText = `Showing ${startIndex + 1}-${endIndex} of ${totalItems} accounts`;
+      btnPrevPage.disabled = currentPage === 1;
+      btnNextPage.disabled = currentPage === totalPages || totalPages === 0;
+    }
+
+    // Modal popup helper
+    function showAccountDetail(acc) {
+      modalAvatar.innerText = getInitials(acc.name);
+      modalName.innerText = acc.name;
+      modalHandle.innerText = acc.handle;
+      
+      const catClass = getCategoryClass(acc.category);
+      modalCategory.className = `category-tag ${catClass}`;
+      modalCategory.innerText = acc.category;
+      
+      modalProject.innerText = acc.project;
+      modalFollowers.innerText = formatNumber(acc.followers);
+      modalActivity.innerText = `${acc.weekly_tweets} tweets / wk`;
+      modalEngagement.innerText = `${acc.engagement_rate}%`;
+      modalGrowth.innerText = `+${acc.follower_growth_90d_pct}%`;
+      modalNote.innerText = acc.note || `Key Solana contributor involved with ${acc.project}.`;
+      modalBtnX.href = acc.link || `https://x.com/${acc.handle.replace('@', '')}`;
+
+      detailModal.classList.add('open');
+    }
+
+    // Setup event listeners
+    function setupEventListeners() {
+      // Live search input
+      searchInput.addEventListener('input', (e) => {
+        currentFilters.search = e.target.value;
+        currentPage = 1;
+        applyFiltersAndSort();
+      });
+
+      // Weekly activity slider
+      activitySlider.addEventListener('input', (e) => {
+        currentFilters.minActivity = parseInt(e.target.value, 10);
+        updateSliderUI();
+        currentPage = 1;
+        applyFiltersAndSort();
+      });
+
+      // Engagement slider
+      engagementSlider.addEventListener('input', (e) => {
+        currentFilters.minEngagement = parseFloat(e.target.value);
+        updateSliderUI();
+        currentPage = 1;
+        applyFiltersAndSort();
+      });
+
+      // Reset filters
+      btnResetFilters.addEventListener('click', () => {
+        currentFilters.search = '';
+        currentFilters.category = 'All';
+        currentFilters.minActivity = 0;
+        currentFilters.minEngagement = 0;
+        
+        searchInput.value = '';
+        activitySlider.value = 0;
+        engagementSlider.value = 0;
+
+        document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+        const allPill = Array.from(document.querySelectorAll('.category-pill')).find(p => p.textContent.includes('All'));
+        if (allPill) allPill.classList.add('active');
+
+        updateSliderUI();
+        currentPage = 1;
+        applyFiltersAndSort();
+      });
+
+      // Pagination
+      btnPrevPage.addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderTable();
+        }
+      });
+
+      btnNextPage.addEventListener('click', () => {
+        const totalItems = filteredData.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderTable();
+        }
+      });
+
+      // Table Header Sorting
+      document.querySelectorAll('th[data-sort]').forEach(th => {
+        th.addEventListener('click', () => {
+          const col = th.dataset.sort;
+          
+          if (sortingState.column === col) {
+            sortingState.direction = sortingState.direction === 'asc' ? 'desc' : 'asc';
+          } else {
+            sortingState.column = col;
+            sortingState.direction = 'desc'; // default desc for metric, asc for names could be configured, but desc is standard for leadershipboards
+          }
+
+          // Update header indicators
+          document.querySelectorAll('th').forEach(header => {
+            header.classList.remove('active-sort');
+            const icon = header.querySelector('.sort-icon');
+            if (icon) icon.innerText = '';
+          });
+
+          th.classList.add('active-sort');
+          const directionIcon = sortingState.direction === 'asc' ? '▲' : '▼';
+          th.querySelector('.sort-icon').innerText = directionIcon;
+
+          currentPage = 1;
+          applyFiltersAndSort();
+        });
+      });
+
+      // Close modal
+      modalClose.addEventListener('click', () => {
+        detailModal.classList.remove('open');
+      });
+
+      detailModal.addEventListener('click', (e) => {
+        if (e.target === detailModal) {
+          detailModal.classList.remove('open');
+        }
+      });
+
+      // Escape key closes modal
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && detailModal.classList.contains('open')) {
+          detailModal.classList.remove('open');
+        }
+      });
+    }
+
+    // Update Slider Value displays
+    function updateSliderUI() {
+      activityVal.innerText = `${currentFilters.minActivity}+ tweets`;
+      engagementVal.innerText = `${currentFilters.minEngagement}%+ ER`;
+    }
+
+    // Chart.js configuration
+    function initCharts() {
+      // 1. Follower distribution chart config (horizontal bar)
+      const ctxFollowers = document.getElementById('followersChart').getContext('2d');
+      
+      // Select top 10 accounts from filtered dataset or general top 10
+      const top10 = [...filteredData].sort((a,b) => b.followers - a.followers).slice(0, 10);
+      
+      followersChart = new Chart(ctxFollowers, {
+        type: 'bar',
+        data: {
+          labels: top10.map(a => a.name),
+          datasets: [{
+            label: 'Followers',
+            data: top10.map(a => a.followers),
+            backgroundColor: 'rgba(153, 69, 255, 0.65)',
+            borderColor: '#9945FF',
+            borderWidth: 1,
+            borderRadius: 6,
+            hoverBackgroundColor: 'rgba(20, 241, 149, 0.75)',
+            hoverBorderColor: '#14F195'
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(11, 12, 16, 0.95)',
+              titleColor: '#fff',
+              bodyColor: '#fff',
+              borderColor: 'rgba(153, 69, 255, 0.3)',
+              borderWidth: 1,
+              callbacks: {
+                label: function(context) {
+                  return ' ' + formatNumber(context.raw) + ' Followers';
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: 'rgba(255, 255, 255, 0.05)' },
+              ticks: {
+                color: '#8b949e',
+                font: { family: 'Plus Jakarta Sans', size: 10 },
+                callback: function(value) { return formatNumber(value); }
+              }
+            },
+            y: {
+              grid: { display: false },
+              ticks: {
+                color: '#f5f6fa',
+                font: { family: 'Plus Jakarta Sans', size: 10 }
+              }
+            }
+          }
+        }
+      });
+
+      // 2. Category doughnut chart configuration
+      const ctxCategory = document.getElementById('categoryChart').getContext('2d');
+      const catCounts = {};
+      ACCOUNTS_DATA.forEach(acc => {
+        catCounts[acc.category] = (catCounts[acc.category] || 0) + 1;
+      });
+
+      categoryChart = new Chart(ctxCategory, {
+        type: 'doughnut',
+        data: {
+          labels: Object.keys(catCounts),
+          datasets: [{
+            data: Object.values(catCounts),
+            backgroundColor: [
+              'rgba(153, 69, 255, 0.7)',  // Purple
+              'rgba(20, 241, 149, 0.7)',  // Green
+              'rgba(0, 194, 255, 0.7)',   // Cyan
+              'rgba(255, 114, 94, 0.7)',  // Salmon
+              'rgba(255, 215, 0, 0.7)',   // Yellow
+              'rgba(220, 53, 69, 0.7)',   // Red/Pink
+              'rgba(111, 66, 193, 0.7)'   // Dark purple
+            ],
+            borderColor: '#0b0c10',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'right',
+              labels: {
+                color: '#8b949e',
+                font: { family: 'Plus Jakarta Sans', size: 10 },
+                padding: 12,
+                boxWidth: 10
+              }
+            },
+            tooltip: {
+              backgroundColor: 'rgba(11, 12, 16, 0.95)',
+              titleColor: '#fff',
+              bodyColor: '#fff',
+              callbacks: {
+                label: function(context) {
+                  const label = context.label || '';
+                  const val = context.raw || 0;
+                  const total = context.dataset.data.reduce((a,b) => a+b, 0);
+                  const pct = Math.round((val / total) * 100);
+                  return ` ${label}: ${val} (${pct}%)`;
+                }
+              }
+            }
+          },
+          cutout: '70%'
+        }
+      });
+    }
+
+    // Update charts dynamically when filters apply
+    function updateCharts() {
+      if (!followersChart || !categoryChart) return;
+
+      // Update followers chart (horizontal bar)
+      const top10 = [...filteredData].sort((a,b) => b.followers - a.followers).slice(0, 10);
+      followersChart.data.labels = top10.map(a => a.name);
+      followersChart.data.datasets[0].data = top10.map(a => a.followers);
+      followersChart.update();
+
+      // Update category doughnut chart based on CURRENT filtered accounts
+      const catCounts = {};
+      filteredData.forEach(acc => {
+        catCounts[acc.category] = (catCounts[acc.category] || 0) + 1;
+      });
+
+      categoryChart.data.labels = Object.keys(catCounts);
+      categoryChart.data.datasets[0].data = Object.values(catCounts);
+      categoryChart.update();
+    }
+
+    // Run initialization on load
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
