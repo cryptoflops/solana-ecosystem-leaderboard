@@ -189,39 +189,7 @@ function main() {
     processedHandles.add(handle);
   }
 
-  // Add any MD accounts that are NOT in the CSV to make sure we don't miss any top 70 accounts
-  for (const [handle, mdAcc] of mdAccountsMap.entries()) {
-    if (!processedHandles.has(handle)) {
-      let category = "Founders & Foundations";
-      const cat = mdAcc.category;
-      if (cat === "Founders") {
-        category = "Founders & Foundations";
-      } else if (cat === "Builders") {
-        category = "Infrastructure & Wallets";
-      } else if (cat === "Researchers") {
-        category = "Research & VCs";
-      } else if (cat === "BD") {
-        category = "DeFi Protocols";
-      } else if (cat === "Marketing") {
-        category = "Community & Media";
-      } else if (cat === "Important") {
-        category = "Founders & Foundations";
-      }
-
-      mergedAccounts.push({
-        name: mdAcc.name,
-        handle: mdAcc.handle,
-        link: mdAcc.link,
-        project: mdAcc.project,
-        followers: mdAcc.followers,
-        category: category,
-        weekly_tweets: mdAcc.weekly_tweets,
-        engagement_rate: mdAcc.engagement_rate,
-        follower_growth_90d_pct: mdAcc.follower_growth_90d_pct,
-        note: `Key Solana contributor involved with ${mdAcc.project}.`
-      });
-    }
-  }
+  // Do not merge MD-only accounts to avoid hallucinated/inactive accounts
 
   fs.writeFileSync(outputJsonPath, JSON.stringify(mergedAccounts, null, 2), 'utf8');
   console.log(`Successfully saved ${mergedAccounts.length} merged accounts to ${outputJsonPath}`);
