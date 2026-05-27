@@ -1,0 +1,5 @@
+cookies.json
+.env
+audit_output/
+__pycache__/
+*.pyc

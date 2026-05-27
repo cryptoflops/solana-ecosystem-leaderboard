@@ -1,0 +1,8 @@
+{
+  "_comment": "Fill in your X account credentials for twscrape (mode=scraper). Never commit this file to git.",
+  "username": "YOUR_X_USERNAME",
+  "password": "YOUR_X_PASSWORD",
+  "email": "YOUR_EMAIL@example.com",
+  "email_password": "YOUR_EMAIL_PASSWORD",
+  "cookies": ""
+}

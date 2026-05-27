@@ -15,7 +15,7 @@ function normalizeHandle(handleOrLink) {
   return handleOrLink;
 }
 
-function parseCSVLine(line) {
+function parseCSVLine(line, delimiter = ',') {
   // Simple CSV parser that handles quotes
   const result = [];
   let current = '';
@@ -25,7 +25,7 @@ function parseCSVLine(line) {
     const char = line[i];
     if (char === '"') {
       inQuotes = !inQuotes;
-    } else if (char === ',' && !inQuotes) {
+    } else if (char === delimiter && !inQuotes) {
       result.push(current);
       current = '';
     } else {
@@ -39,7 +39,7 @@ function parseCSVLine(line) {
 function main() {
   const workspaceDir = "/Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research";
   const mdFilePath = path.join(workspaceDir, "Build a live dashboard of the top 70 Solana ecosys.md");
-  const csvFilePath = path.join(workspaceDir, "solana_influential_accounts.csv");
+  const csvFilePath = path.join(workspaceDir, "Influential_Solana_Twitter_Accounts.csv");
   const outputJsonPath = path.join(workspaceDir, "data.json");
 
   // 1. Read Markdown file to extract Python definitions of accounts
@@ -79,11 +79,19 @@ function main() {
   // 2. Read CSV
   const csvContent = fs.readFileSync(csvFilePath, 'utf8');
   const csvLines = csvContent.split('\n').filter(l => l.trim() !== "");
-  const headers = parseCSVLine(csvLines[0]);
+  
+  let headerIndex = 0;
+  // If the first line doesn't have the delimiter or Twitter URL headers, check the next line
+  if (!csvLines[0].includes(';') && !csvLines[0].includes(',') && csvLines[1]) {
+    headerIndex = 1;
+  }
+  
+  const delimiter = csvLines[headerIndex].includes(';') ? ';' : ',';
+  const headers = parseCSVLine(csvLines[headerIndex], delimiter);
   
   const csvAccounts = [];
-  for (let i = 1; i < csvLines.length; i++) {
-    const values = parseCSVLine(csvLines[i]);
+  for (let i = headerIndex + 1; i < csvLines.length; i++) {
+    const values = parseCSVLine(csvLines[i], delimiter);
     if (values.length < 4) continue;
     
     const row = {};
@@ -91,12 +99,16 @@ function main() {
       row[headers[j].trim()] = values[j] ? values[j].trim() : "";
     }
     
-    if (row["Twitter Link"]) {
+    if (row["Twitter Link"] || row["Twitter URL"]) {
+      // normalize header name if needed
+      if (!row["Twitter Link"] && row["Twitter URL"]) {
+        row["Twitter Link"] = row["Twitter URL"];
+      }
       csvAccounts.push(row);
     }
   }
   
-  console.log(`Loaded ${csvAccounts.length} accounts from CSV file.`);
+  console.log(`Loaded ${csvAccounts.length} accounts from CSV file using delimiter '${delimiter}'.`);
 
   // 3. Merge
   const mergedAccounts = [];
