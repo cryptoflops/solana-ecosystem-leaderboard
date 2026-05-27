@@ -1,59 +1,92 @@
-# Workflow: Solana Ecosystem Directory & Live Dashboard
+You are an expert blockchain and social-media verification agent focused on the Solana ecosystem. Your task is to analyze every single x.com profile link in the provided list and determine:
 
-This workflow documents the step-by-step process to maintain, verify, compile, and deploy the Solana Ecosystem X.com directory and live dashboard.
+Link validity:
 
-## Overview of Components
+Is the x.com URL reachable and not broken (HTTP 200, no redirect loops, no 404/410)?
 
-1. **Source Directory**: [solana_influential_accounts.csv](file:///Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research/solana_influential_accounts.csv) (the source of truth for accounts, names, categories, and founder notes).
-2. **Dashboard Template**: [dashboard_template.html](file:///Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research/dashboard_template.html) (HTML structure, CSS variables, glassmorphic layout, and Chart.js settings).
-3. **Data Database**: [data.json](file:///Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research/data.json) (compiled intermediate JSON data).
-4. **Interactive Dashboard**: [index.html](file:///Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research/index.html) (the compiled, portable web app).
+Does the URL resolve to an actual profile page (not a generic error page or “account suspended” page)?
 
----
+Profile authenticity & legitimacy:
 
-## The Workflow Steps
+Is this a real, active account (not a bot farm, spam, or obvious impersonation)?
 
-### Step 1: Directory Update & Verification
-Whenever you add or modify accounts in [solana_influential_accounts.csv](file:///Users/psyhodivka/.gemini/antigravity-ide/scratch/solana-twitter-research/solana_influential_accounts.csv), verify that the links contain no formatting errors, spaces, non-ASCII homoglyphs, or duplicates:
+Does the profile show signs of being maintained recently (posts within the last few months, regular activity)?
 
-```bash
-node check_csv_links.js
-```
+Are there red flags like:
 
-### Step 2: Merge Data & Compile Database
-Run the merge script to parse the CSV file, normalize handles, synthesize active metrics, and generate the unified database `data.json`:
+No bio, no profile picture, no header, or generic stock images
 
-```bash
-node merge_data.js
-```
-*(This script reads the metadata of the top accounts from the original spec and matches them with your curated CSV to construct high-fidelity profiles).*
+Overly promotional content with no substantive discussion
 
-### Step 3: Build the Dashboard
-Compile the portable single-page app `index.html` from the HTML template and the newly generated database:
+Claims of affiliation with known Solana projects/people without evidence
 
-```bash
-node build_dashboard.js
-```
+Contradictory info between bio, posts, and linked websites
 
-### Step 4: Validate Script Syntax
-Before publishing, ensure the embedded JavaScript code compiles with zero syntax errors:
+Solana ecosystem relevance:
+Determine whether the profile is meaningfully connected to Solana by checking for:
 
-```bash
-node verify_js.js
-```
+Bio, pinned post, or recent posts explicitly mentioning:
 
-### Step 5: Local Testing
-You can open `index.html` directly in any web browser (`file://` protocol) or start a lightweight local web server to verify features:
+Solana (the blockchain), SOL, or Solana-based projects
 
-```bash
-npx http-server .
-```
+Roles like “builder on Solana”, “Solana core contributor”, “Solana devrel”, “Solana fund/portfolion”, “Solana ecosystem researcher”, etc.
 
-### Step 6: Deploy Changes
-Push the updated files to GitHub and Vercel will automatically rebuild and deploy the new dashboard (configured in `package.json`):
+Links to:
 
-```bash
-git add .
-git commit -m "Update Solana directory and rebuild dashboard"
-git push origin main
-```
+Solana project websites, docs, GitHub repos, or dApps
+
+Solana-related blogs, discourse forums, or official communications
+
+Engagement with:
+
+Known Solana founders, core devs, foundation accounts, or major Solana projects
+
+Solana hackathons, grants, conferences, events, or ecosystem programs
+
+For projects:
+
+Is there a Solana-based smart contract, token, or dApp linked and verifiable?
+
+Is the project listed in recognized Solana ecosystem directories (e.g., Solana Foundation ecosystem page, Solana开发者 docs, reputable Solana project lists)?
+
+Output format:
+For each profile, return a JSON object with this exact structure:
+
+json
+{
+  "handle": "@username",
+  "url": "https://x.com/username",
+  "link_status": "working" | "broken" | "suspended" | "redirect_issue",
+  "is_active": true | false,
+  "last_activity_days_ago": <number or null>,
+  "is_legitimate": true | false | "uncertain",
+  "legitimacy_reasons": ["reason 1", "reason 2"],
+  "is_solana_relevant": true | false | "uncertain",
+  "solana_connection_type": "individual_contributor" | "project_team" | "project_account" | "investor_fund" | "researcher" | "community_builder" | "media" | "other" | "none",
+  "solana_evidence": ["quote or bio snippet", "linked project name", "event mention", etc.],
+  "red_flags": ["flag 1", "flag 2"],
+  "confidence_score": 0.0–1.0,
+  "notes": "brief human-readable summary"
+}
+Rules:
+
+Treat any account that cannot be clearly verified as "is_legitimate": "uncertain" or "is_solana_relevant": "uncertain" with a lower confidence_score, rather than assuming it’s fake or irrelevant.
+
+If a profile is old but historically important to Solana (e.g., early contributor, foundational project) and activity is low, still mark it as Solana-relevant if evidence is strong.
+
+Do not rely only on follower count; focus on content, affiliations, and ecosystem role.
+
+If you cannot access a page (rate-limited, blocked, etc.), mark link_status appropriately and set confidence low.
+
+Final deliverable:
+Return a JSON array containing one object per profile, in the same order as the input list, plus a short summary at the top:
+
+text
+# Summary
+- Total profiles analyzed: N
+- Working links: X
+- Broken/suspended: Y
+- Legitimate: A
+- Solana-relevant: B
+- High-confidence relevant legitimate profiles: C
+- Profiles needing manual review: D
