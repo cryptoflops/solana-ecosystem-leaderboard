@@ -115,7 +115,21 @@ function main() {
     const note = row["Note"];
     const groupName = row["Group Name"];
 
+    // Category mapping
     let category = groupName;
+    if (groupName.includes("DeFi Protocols")) {
+      category = "DeFi Protocols";
+    } else if (groupName.includes("Infrastructure")) {
+      category = "Infrastructure & Wallets";
+    } else if (groupName.includes("Core & Foundations")) {
+      category = "Founders & Foundations";
+    } else if (groupName.includes("Community, Media")) {
+      category = "Community & Media";
+    } else if (groupName.includes("Research, Analytics")) {
+      category = "Research & VCs";
+    } else if (groupName.includes("Regional")) {
+      category = "Regional Hubs";
+    }
 
     let mergedAcc = {};
 

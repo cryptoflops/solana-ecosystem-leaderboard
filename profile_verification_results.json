@@ -1,0 +1,3068 @@
+[
+  {
+    "handle": "@akshaybd",
+    "url": "https://x.com/akshaybd",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Superteam co-founder; insights on growth, distribution, and emerging markets.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Superteam co-founder; insights on growth, distribution, and emerging markets."
+  },
+  {
+    "handle": "@toly",
+    "url": "https://x.com/toly",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Solana co-founder; shares critical technical, roadmap, and network updates.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Solana co-founder; shares critical technical, roadmap, and network updates."
+  },
+  {
+    "handle": "@armaniferrante",
+    "url": "https://x.com/armaniferrante",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Backpack & Anchor framework founder; core builder voice for Rust developers.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Backpack & Anchor framework founder; core builder voice for Rust developers."
+  },
+  {
+    "handle": "@baalazamon",
+    "url": "https://x.com/baalazamon",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Cube CEO; insights on hybrid exchange models and cross-chain execution.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Cube CEO; insights on hybrid exchange models and cross-chain execution."
+  },
+  {
+    "handle": "@bennybitcoins",
+    "url": "https://x.com/bennybitcoins",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Jupiter co-founder; product design and ecosystem collaboration insights.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Jupiter co-founder; product design and ecosystem collaboration insights."
+  },
+  {
+    "handle": "@brianlong",
+    "url": "https://x.com/BrianLong",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Triton One co-founder; updates on global infrastructure and validator health.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Triton One co-founder; updates on global infrastructure and validator health."
+  },
+  {
+    "handle": "@cindyleowtt",
+    "url": "https://x.com/cindyleowtt",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Drift co-founder; insights on perpetual DEXs, risk, and DeFi scaling.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Drift co-founder; insights on perpetual DEXs, risk, and DeFi scaling."
+  },
+  {
+    "handle": "@clayrobbins",
+    "url": "https://x.com/clayrobbins",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Colosseum co-founder; venture funding and project acceleration insights.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Colosseum co-founder; venture funding and project acceleration insights."
+  },
+  {
+    "handle": "@danielfromjito",
+    "url": "https://x.com/danielfromjito",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Jito co-founder; updates on MEV infrastructure and liquid staking.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Jito co-founder; updates on MEV infrastructure and liquid staking."
+  },
+  {
+    "handle": "@highcoinviction",
+    "url": "https://x.com/HighCoinviction",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Syncracy Capital co-founder; market structure and investment thesis analyst.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Syncracy Capital co-founder; market structure and investment thesis analyst."
+  },
+  {
+    "handle": "@0xshittrader",
+    "url": "https://x.com/0xShitTrader",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Ellipsis Labs co-founder; insights on orderbook mechanics and state design.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ellipsis Labs co-founder; insights on orderbook mechanics and state design."
+  },
+  {
+    "handle": "@soleconomist",
+    "url": "https://x.com/soleconomist",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Sanctum founder; deep insights into liquid staking and economic design.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Sanctum founder; deep insights into liquid staking and economic design."
+  },
+  {
+    "handle": "@frankieisokay",
+    "url": "https://x.com/FrankieIsOkay",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Phantom co-founder; builder updates on UX and mobile wallet design.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Phantom co-founder; builder updates on UX and mobile wallet design."
+  },
+  {
+    "handle": "@oritheorca",
+    "url": "https://x.com/oritheorca",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Orca co-founder; focus on DeFi user experience and clean interfaces.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Orca co-founder; focus on DeFi user experience and clean interfaces."
+  },
+  {
+    "handle": "@_ilmoi",
+    "url": "https://x.com/_ilmoi",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Tensor co-founder; updates on NFT market dynamics and creator monetization.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Tensor co-founder; updates on NFT market dynamics and creator monetization."
+  },
+  {
+    "handle": "@jarxiao",
+    "url": "https://x.com/jarxiao",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Ellipsis Labs co-founder; builder perspective on high-performance DeFi.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ellipsis Labs co-founder; builder perspective on high-performance DeFi."
+  },
+  {
+    "handle": "@jwashanza",
+    "url": "https://x.com/JWashAnza",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "CEO of Anza; leader in core engineering and protocol developments.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "CEO of Anza; leader in core engineering and protocol developments."
+  },
+  {
+    "handle": "@kashdhanda",
+    "url": "https://x.com/kashdhanda",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Superteam co-founder; community-led marketing and talent coordination.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Superteam co-founder; community-led marketing and talent coordination."
+  },
+  {
+    "handle": "@kylesamani",
+    "url": "https://x.com/kylesamani",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "project_account",
+    "solana_evidence": [
+      "Multicoin Managing Partner; publishes bold theses on crypto infrastructure.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Multicoin Managing Partner; publishes bold theses on crypto infrastructure."
+  },
+  {
+    "handle": "@buffalu__",
+    "url": "https://x.com/buffalu__",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Jito CEO; insights on network latency, MEV, and core infrastructure.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Jito CEO; insights on network latency, MEV, and core infrastructure."
+  },
+  {
+    "handle": "@y2kappa",
+    "url": "https://x.com/y2kappa",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Kamino co-founder; technical deep-dives on lending risk models and math.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Kamino co-founder; technical deep-dives on lending risk models and math."
+  },
+  {
+    "handle": "@mattytay",
+    "url": "https://x.com/mattytay",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Colosseum co-founder; crucial follow for hackathon strategy and startup scaling.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Colosseum co-founder; crucial follow for hackathon strategy and startup scaling."
+  },
+  {
+    "handle": "@weremeow",
+    "url": "https://x.com/weremeow",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Jupiter co-founder; highly active voice on alignment, DAO governance, and growth.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Jupiter co-founder; highly active voice on alignment, DAO governance, and growth."
+  },
+  {
+    "handle": "@mert",
+    "url": "https://x.com/mert",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Helius CEO; vocal developer advocate sharing performance data and ecosystem insights.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Helius CEO; vocal developer advocate sharing performance data and ecosystem insights."
+  },
+  {
+    "handle": "@mdomcahill",
+    "url": "https://x.com/mdomcahill",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Douro Labs/Pyth CEO; insights on institutional data and decentralized oracle scaling.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Douro Labs/Pyth CEO; insights on institutional data and decentralized oracle scaling."
+  },
+  {
+    "handle": "@nixxholas",
+    "url": "https://x.com/nixxholas",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "SolanaFM co-founder; developer building block explorer data APIs.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "SolanaFM co-founder; developer building block explorer data APIs."
+  },
+  {
+    "handle": "@rajgokal",
+    "url": "https://x.com/rajgokal",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Solana co-founder; focuses on ecosystem growth, culture, and founder perspectives.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Solana co-founder; focuses on ecosystem growth, culture, and founder perspectives."
+  },
+  {
+    "handle": "@0xrwu",
+    "url": "https://x.com/0xrwu",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Tensor co-founder; engineering updates on high-frequency trading of NFTs.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Tensor co-founder; engineering updates on high-frequency trading of NFTs."
+  },
+  {
+    "handle": "@ryanwatkins_",
+    "url": "https://x.com/RyanWatkins_",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Syncracy Capital co-founder; deep fundamental research on Solana network value.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Syncracy Capital co-founder; deep fundamental research on Solana network value."
+  },
+  {
+    "handle": "@solbigbrain",
+    "url": "https://x.com/SolBigBrain",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Big Brain Holdings founder; early venture investor and startup advisor.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Big Brain Holdings founder; early venture investor and startup advisor."
+  },
+  {
+    "handle": "@simkinstepan",
+    "url": "https://x.com/SimkinStepan",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Squads CEO; updates on multisig security and treasury management solutions.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Squads CEO; updates on multisig security and treasury management solutions."
+  },
+  {
+    "handle": "@stephenakridge",
+    "url": "https://x.com/stephenakridge",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Solana & Anza co-founder; core protocol performance engineering insights.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Solana & Anza co-founder; core protocol performance engineering insights."
+  },
+  {
+    "handle": "@tarunchitra",
+    "url": "https://x.com/tarunchitra",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Gauntlet founder; mathematical researcher publishing on DeFi risk.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Gauntlet founder; mathematical researcher publishing on DeFi risk."
+  },
+  {
+    "handle": "@yver__",
+    "url": "https://x.com/yver__",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Backpack co-founder; updates on community building, wallets, and exchange expansion.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Backpack co-founder; updates on community building, wallets, and exchange expansion."
+  },
+  {
+    "handle": "@tusharjain_",
+    "url": "https://x.com/TusharJain_",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "project_account",
+    "solana_evidence": [
+      "Multicoin Managing Partner; focuses on crypto-native business models and incentives.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Multicoin Managing Partner; focuses on crypto-native business models and incentives."
+  },
+  {
+    "handle": "@vibhu",
+    "url": "https://x.com/vibhu",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "DRiP founder; writes on consumer crypto apps and user acquisition.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "DRiP founder; writes on consumer crypto apps and user acquisition."
+  },
+  {
+    "handle": "@rawfalafel",
+    "url": "https://x.com/rawfalafel",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Orca co-founder; technical builder of efficient AMM smart contracts.",
+      "Listed under group Founders of Solana projects"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Orca co-founder; technical builder of efficient AMM smart contracts."
+  },
+  {
+    "handle": "@lightspeedpod",
+    "url": "https://x.com/LightspeedPod",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "media",
+    "solana_evidence": [
+      "Must-listen podcast covering Solana technology, builders, and ecosystem news.",
+      "Listed under group OGs (Original Gangsters/long-time contributors)"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Must-listen podcast covering Solana technology, builders, and ecosystem news."
+  },
+  {
+    "handle": "@solanalabs",
+    "url": "https://x.com/solanalabs",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Core technology builder behind Solana; follows software releases and products.",
+      "Listed under group OGs (Original Gangsters/long-time contributors)"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Core technology builder behind Solana; follows software releases and products."
+  },
+  {
+    "handle": "@anza_xyz",
+    "url": "https://x.com/anza_xyz",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Core developer shop building Solana client; essential for technical node updates.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Core developer shop building Solana client; essential for technical node updates."
+  },
+  {
+    "handle": "@therealchaseeb",
+    "url": "https://x.com/therealchaseeb",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Solana Foundation DevRel Lead; essential contact for developer grants and support.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Solana Foundation DevRel Lead; essential contact for developer grants and support."
+  },
+  {
+    "handle": "@garrettharper_",
+    "url": "https://x.com/GarrettHarper_",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Lightspeed co-host; interviews builders and distills Solana developments.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Lightspeed co-host; interviews builders and distills Solana developments."
+  },
+  {
+    "handle": "@heliuslabs",
+    "url": "https://x.com/heliuslabs",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Leading developer platform; RPCs, APIs, and webhooks for building on Solana.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Leading developer platform; RPCs, APIs, and webhooks for building on Solana."
+  },
+  {
+    "handle": "@jump_",
+    "url": "https://x.com/jump_",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Major quantitative market builder and developer of Firedancer client.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Major quantitative market builder and developer of Firedancer client."
+  },
+  {
+    "handle": "@kiryl_sol",
+    "url": "https://x.com/kiryl_sol",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Developer Advocate; creates developer resources and bot tooling.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Developer Advocate; creates developer resources and bot tooling."
+  },
+  {
+    "handle": "@laine_sa",
+    "url": "https://x.com/Laine_SA",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Validator operator and builder; publishes high-quality weekly ecosystem status updates.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Validator operator and builder; publishes high-quality weekly ecosystem status updates."
+  },
+  {
+    "handle": "@nickfrosty",
+    "url": "https://x.com/nickfrosty",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Developer educator at Solana Foundation; publishes guides, tutorials, and ecosystem resources.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Developer educator at Solana Foundation; publishes guides, tutorials, and ecosystem resources."
+  },
+  {
+    "handle": "@0xsats",
+    "url": "https://x.com/0xSats",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Developer and open-source advocate; tracks technical updates and builder tooling.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Developer and open-source advocate; tracks technical updates and builder tooling."
+  },
+  {
+    "handle": "@slorgoftheslugs",
+    "url": "https://x.com/slorgoftheslugs",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Jupiter contributor; highly engaged community builder and narrative amplifier.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Jupiter contributor; highly engaged community builder and narrative amplifier."
+  },
+  {
+    "handle": "@solana_devs",
+    "url": "https://x.com/solana_devs",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Official developer updates, hackathon announcements, and technical documentation.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Official developer updates, hackathon announcements, and technical documentation."
+  },
+  {
+    "handle": "@superteamdao",
+    "url": "https://x.com/SuperteamDAO",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Solana's premier growth and talent DAO; vital hub for new builders.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Solana's premier growth and talent DAO; vital hub for new builders."
+  },
+  {
+    "handle": "@superteamfrance",
+    "url": "https://x.com/SuperteamFRANCE",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Regional community builder supporting builders across French tech.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Regional community builder supporting builders across French tech."
+  },
+  {
+    "handle": "@superteamin",
+    "url": "https://x.com/SuperteamIN",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Ecosystem hub for builders in India; massive developer talent pool.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem hub for builders in India; massive developer talent pool."
+  },
+  {
+    "handle": "@superteamjapan",
+    "url": "https://x.com/SuperteamJapan",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Connects Solana projects with builders and corporate partners in Japan.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Connects Solana projects with builders and corporate partners in Japan."
+  },
+  {
+    "handle": "@superteamvn",
+    "url": "https://x.com/SuperteamVN",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Ecosystem hub in Vietnam; rapidly growing developer community.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem hub in Vietnam; rapidly growing developer community."
+  },
+  {
+    "handle": "@realdezen",
+    "url": "https://x.com/realdezen",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Meteora co-lead; protocol operations and developer partnership updates.",
+      "Listed under group Builders and developers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Meteora co-lead; protocol operations and developer partnership updates."
+  },
+  {
+    "handle": "@0xcheeezzyyyy",
+    "url": "https://x.com/0xcheeezzyyyy",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Independent researcher; provides data-driven analysis of on-chain activity.",
+      "Listed under group Researchers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Independent researcher; provides data-driven analysis of on-chain activity."
+  },
+  {
+    "handle": "@solanafm",
+    "url": "https://x.com/solanafm",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Data explorer; essential for understanding on-chain transaction analysis.",
+      "Listed under group Researchers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Data explorer; essential for understanding on-chain transaction analysis."
+  },
+  {
+    "handle": "@zieeyer",
+    "url": "https://x.com/ZieEyer",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Ecosystem analyst writing detailed essays on protocols and tokens.",
+      "Listed under group Researchers"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem analyst writing detailed essays on protocols and tokens."
+  },
+  {
+    "handle": "@jayantkrish",
+    "url": "https://x.com/jayantkrish",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Douro Labs/Pyth CTO; technical oracle infrastructure and feed reliability.",
+      "Listed under group Business Development (BD) roles"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Douro Labs/Pyth CTO; technical oracle infrastructure and feed reliability."
+  },
+  {
+    "handle": "@jupiterexchange",
+    "url": "https://x.com/JupiterExchange",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Leading liquidity aggregator; key infrastructure for token swaps and trading.",
+      "Listed under group Business Development (BD) roles"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Leading liquidity aggregator; key infrastructure for token swaps and trading."
+  },
+  {
+    "handle": "@phantom",
+    "url": "https://x.com/phantom",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Leading consumer wallet; critical portal for user acquisition and dApp integration.",
+      "Listed under group Business Development (BD) roles"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Leading consumer wallet; critical portal for user acquisition and dApp integration."
+  },
+  {
+    "handle": "@pythnetwork",
+    "url": "https://x.com/PythNetwork",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Low-latency oracle network; essential for accurate real-time price feeds.",
+      "Listed under group Business Development (BD) roles"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Low-latency oracle network; essential for accurate real-time price feeds."
+  },
+  {
+    "handle": "@solanafndn",
+    "url": "https://x.com/SolanaFndn",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Official foundation account; tracks grants, ecosystem growth, and global initiatives.",
+      "Listed under group Business Development (BD) roles"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Official foundation account; tracks grants, ecosystem growth, and global initiatives."
+  },
+  {
+    "handle": "@backpack",
+    "url": "https://x.com/backpack",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Next-gen wallet and exchange; integrates Mad Lads community and xNFTs.",
+      "Listed under group Marketing specialists"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Next-gen wallet and exchange; integrates Mad Lads community and xNFTs."
+  },
+  {
+    "handle": "@degennews",
+    "url": "https://x.com/DegenNews",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "media",
+    "solana_evidence": [
+      "Web3 news feed covering breaking Solana announcements and market shifts.",
+      "Listed under group Marketing specialists"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Web3 news feed covering breaking Solana announcements and market shifts."
+  },
+  {
+    "handle": "@solanadaily",
+    "url": "https://x.com/SolanaDaily",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "media",
+    "solana_evidence": [
+      "Ecosystem news aggregator; useful for tracking daily project launches.",
+      "Listed under group Marketing specialists"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem news aggregator; useful for tracking daily project launches."
+  },
+  {
+    "handle": "@superteamtr",
+    "url": "https://x.com/SuperteamTR",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Solana community hub in Turkey; active hacker events and meetups.",
+      "Listed under group Marketing specialists"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Solana community hub in Turkey; active hacker events and meetups."
+  },
+  {
+    "handle": "@austin_federa",
+    "url": "https://x.com/Austin_Federa",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Head of Strategy at Solana Foundation; clarifies network upgrades and strategic direction.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Head of Strategy at Solana Foundation; clarifies network upgrades and strategic direction."
+  },
+  {
+    "handle": "@colosseum",
+    "url": "https://x.com/colosseum",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Independent accelerator and VC; runs official Solana hackathons.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Independent accelerator and VC; runs official Solana hackathons."
+  },
+  {
+    "handle": "@cubexch",
+    "url": "https://x.com/cubexch",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Hybrid exchange; blends MPC custody with off-chain order execution speed.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Hybrid exchange; blends MPC custody with off-chain order execution speed."
+  },
+  {
+    "handle": "@driftprotocol",
+    "url": "https://x.com/DriftProtocol",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Top perpetuals exchange; useful for studying on-chain derivative mechanics.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Top perpetuals exchange; useful for studying on-chain derivative mechanics."
+  },
+  {
+    "handle": "@drip_haus",
+    "url": "https://x.com/drip_haus",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Free digital collectibles platform; showcases micro-payments and mass distribution.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Free digital collectibles platform; showcases micro-payments and mass distribution."
+  },
+  {
+    "handle": "@jito_sol",
+    "url": "https://x.com/jito_sol",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "MEV infrastructure leader; key for transaction performance and staking yield optimization.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "MEV infrastructure leader; key for transaction performance and staking yield optimization."
+  },
+  {
+    "handle": "@kamino_finance",
+    "url": "https://x.com/Kamino_Finance",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Major lending and automated yield vault; hub for DeFi liquidity.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Major lending and automated yield vault; hub for DeFi liquidity."
+  },
+  {
+    "handle": "@calilyliu",
+    "url": "https://x.com/calilyliu",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "President of Solana Foundation; key insights on global payments and institutional adoption.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "President of Solana Foundation; key insights on global payments and institutional adoption."
+  },
+  {
+    "handle": "@meteoraag",
+    "url": "https://x.com/MeteoraAg",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Dynamic AMM and liquidity layer; focuses on sustainable LP yields.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Dynamic AMM and liquidity layer; focuses on sustainable LP yields."
+  },
+  {
+    "handle": "@multicoincap",
+    "url": "https://x.com/MulticoinCap",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Pioneering VC firm; early backer sharing deep theses on Solana.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Pioneering VC firm; early backer sharing deep theses on Solana."
+  },
+  {
+    "handle": "@orca_so",
+    "url": "https://x.com/orca_so",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Capital-efficient CLMM DEX; essential partner for liquidity providers.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Capital-efficient CLMM DEX; essential partner for liquidity providers."
+  },
+  {
+    "handle": "@phoenixtrade",
+    "url": "https://x.com/PhoenixTrade",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Fully on-chain limit order book; provides ultra-fast market data and execution.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Fully on-chain limit order book; provides ultra-fast market data and execution."
+  },
+  {
+    "handle": "@raydiumprotocol",
+    "url": "https://x.com/RaydiumProtocol",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Key AMM and launchpad venue; massive liquidity hub for new tokens.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Key AMM and launchpad venue; massive liquidity hub for new tokens."
+  },
+  {
+    "handle": "@sanctumso",
+    "url": "https://x.com/sanctumso",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Liquid staking infrastructure; enables custom LST creation and token utility.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Liquid staking infrastructure; enables custom LST creation and token utility."
+  },
+  {
+    "handle": "@0xsoju",
+    "url": "https://x.com/0xSoju",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Meteora co-lead; ecosystem growth and liquidity alignment strategies.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Meteora co-lead; ecosystem growth and liquidity alignment strategies."
+  },
+  {
+    "handle": "@solana",
+    "url": "https://x.com/solana",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Official Solana network account; updates on major milestones and global events.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Official Solana network account; updates on major milestones and global events."
+  },
+  {
+    "handle": "@solflare_wallet",
+    "url": "https://x.com/solflare_wallet",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Trusted, long-standing wallet; features staking, swap, and dApp security tools.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Trusted, long-standing wallet; features staking, swap, and dApp security tools."
+  },
+  {
+    "handle": "@squadsprotocol",
+    "url": "https://x.com/SquadsProtocol",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Multisig and smart account infrastructure; essential for managing startup treasuries.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Multisig and smart account infrastructure; essential for managing startup treasuries."
+  },
+  {
+    "handle": "@superteambr",
+    "url": "https://x.com/SuperteamBR",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Main gateway for Solana expansion and talent in Latin America.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Main gateway for Solana expansion and talent in Latin America."
+  },
+  {
+    "handle": "@superteamearn",
+    "url": "https://x.com/SuperteamEarn",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Platform for bounties, grants, and hiring in the Solana ecosystem.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Platform for bounties, grants, and hiring in the Solana ecosystem."
+  },
+  {
+    "handle": "@superteamde",
+    "url": "https://x.com/SuperteamDE",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Active chapter in Germany; hosts local hacker houses and meetups.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Active chapter in Germany; hosts local hacker houses and meetups."
+  },
+  {
+    "handle": "@superteamuk",
+    "url": "https://x.com/SuperteamUK",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Solana chapter in the United Kingdom; connects startups with local talent.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Solana chapter in the United Kingdom; connects startups with local talent."
+  },
+  {
+    "handle": "@tensor_hq",
+    "url": "https://x.com/tensor_hq",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Leading NFT marketplace; tracks marketplace tooling and NFT volumes.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Leading NFT marketplace; tracks marketplace tooling and NFT volumes."
+  },
+  {
+    "handle": "@tritonone",
+    "url": "https://x.com/TritonOne",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified in curated repository list"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "High-performance RPC and validator services for large-scale enterprise applications.",
+      "Listed under group Anyone else deemed important for new founders to know"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "High-performance RPC and validator services for large-scale enterprise applications."
+  },
+  {
+    "handle": "@aeyakovenko",
+    "url": "https://x.com/aeyakovenko",
+    "link_status": "redirect_issue",
+    "is_active": false,
+    "last_activity_days_ago": null,
+    "is_legitimate": false,
+    "legitimacy_reasons": [
+      "Outdated handle, replaced by @toly"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Solana Co-Founder Anatoly Yakovenko"
+    ],
+    "red_flags": [
+      "Outdated handle"
+    ],
+    "confidence_score": 1,
+    "notes": "Outdated handle for Anatoly Yakovenko. Real handle is @toly."
+  },
+  {
+    "handle": "@garious14",
+    "url": "https://x.com/garious14",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Solana (Technical Co-Founder)"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Greg Fitzgerald (Solana (Technical Co-Founder))."
+  },
+  {
+    "handle": "@bchillman",
+    "url": "https://x.com/BChillman",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Phantom Wallet (CEO/Co-Founder)"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Brandon Millman (Phantom Wallet (CEO/Co-Founder))."
+  },
+  {
+    "handle": "@0xmert_",
+    "url": "https://x.com/0xMert_",
+    "link_status": "broken",
+    "is_active": false,
+    "last_activity_days_ago": null,
+    "is_legitimate": false,
+    "legitimacy_reasons": [
+      "Incorrect spelling of handle"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Helius CEO Mert Mumtaz"
+    ],
+    "red_flags": [
+      "Incorrect handle"
+    ],
+    "confidence_score": 1,
+    "notes": "Incorrect handle for Mert Mumtaz. Correct handle is @mert."
+  },
+  {
+    "handle": "@meby_sol",
+    "url": "https://x.com/meby_sol",
+    "link_status": "broken",
+    "is_active": false,
+    "last_activity_days_ago": null,
+    "is_legitimate": false,
+    "legitimacy_reasons": [
+      "Hallucinated profile name"
+    ],
+    "is_solana_relevant": false,
+    "solana_connection_type": "none",
+    "solana_evidence": [],
+    "red_flags": [
+      "Hallucinated profile"
+    ],
+    "confidence_score": 1,
+    "notes": "Hallucinated Jupiter founder profile. Real founder is Meow (@weremeow)."
+  },
+  {
+    "handle": "@maxbrzezin",
+    "url": "https://x.com/maxbrzezin",
+    "link_status": "broken",
+    "is_active": false,
+    "last_activity_days_ago": null,
+    "is_legitimate": false,
+    "legitimacy_reasons": [
+      "Hallucinated profile name"
+    ],
+    "is_solana_relevant": false,
+    "solana_connection_type": "none",
+    "solana_evidence": [],
+    "red_flags": [
+      "Hallucinated profile"
+    ],
+    "confidence_score": 1,
+    "notes": "Hallucinated Marinade founder profile. Real founders are Marco Broeken and Lucio Tato."
+  },
+  {
+    "handle": "@oak_squrd",
+    "url": "https://x.com/oak_squrd",
+    "link_status": "broken",
+    "is_active": false,
+    "last_activity_days_ago": null,
+    "is_legitimate": false,
+    "legitimacy_reasons": [
+      "Hallucinated profile name"
+    ],
+    "is_solana_relevant": false,
+    "solana_connection_type": "none",
+    "solana_evidence": [],
+    "red_flags": [
+      "Hallucinated profile"
+    ],
+    "confidence_score": 1,
+    "notes": "Hallucinated Sanctum founder profile. Real founder is FP Lee (@soleconomist)."
+  },
+  {
+    "handle": "@josefinstan",
+    "url": "https://x.com/josefinstan",
+    "link_status": "broken",
+    "is_active": false,
+    "last_activity_days_ago": null,
+    "is_legitimate": false,
+    "legitimacy_reasons": [
+      "Hallucinated profile name"
+    ],
+    "is_solana_relevant": false,
+    "solana_connection_type": "none",
+    "solana_evidence": [],
+    "red_flags": [
+      "Hallucinated profile"
+    ],
+    "confidence_score": 1,
+    "notes": "Hallucinated MarginFi founder profile. Real founder is Edgar Pavlovsky (@pxgeek)."
+  },
+  {
+    "handle": "@blknoiz06",
+    "url": "https://x.com/blknoiz06",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Bullpen/Independent Trader"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Ansem (Bullpen/Independent Trader)."
+  },
+  {
+    "handle": "@_jackdunham",
+    "url": "https://x.com/_JackDunham",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with SolanaFloor Founder"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Jack Dunham (SolanaFloor Founder)."
+  },
+  {
+    "handle": "@solanafloor",
+    "url": "https://x.com/SolanaFloor",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "project_account",
+    "solana_evidence": [
+      "Associated with Solana News Platform"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for SolanaFloor (Solana News Platform)."
+  },
+  {
+    "handle": "@solanasean",
+    "url": "https://x.com/SolanaSean",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Early Solana Advocate"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for SolanaSean (Early Solana Advocate)."
+  },
+  {
+    "handle": "@moonoverlord",
+    "url": "https://x.com/MoonOverlord",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Independent Trader/Collector"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for MoonOverlord (Independent Trader/Collector)."
+  },
+  {
+    "handle": "@solanalegend",
+    "url": "https://x.com/SolanaLegend",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with MonkeDAO/Frictionless Capital"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Solana Legend (MonkeDAO/Frictionless Capital)."
+  },
+  {
+    "handle": "@solbuckets",
+    "url": "https://x.com/SOLbuckets",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Sandbar"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for SOLbuckets (Sandbar)."
+  },
+  {
+    "handle": "@frankdegods",
+    "url": "https://x.com/FrankDeGods",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with DeGods/Y00ts"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Frank DeGods (DeGods/Y00ts)."
+  },
+  {
+    "handle": "@cobie",
+    "url": "https://x.com/cobie",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Crypto Veteran/Investor"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Cobie (Crypto Veteran/Investor)."
+  },
+  {
+    "handle": "@jake_mobley",
+    "url": "https://x.com/jake_mobley",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": null,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Real person on Twitter"
+    ],
+    "is_solana_relevant": false,
+    "solana_connection_type": "none",
+    "solana_evidence": [],
+    "red_flags": [
+      "Incorrect/unrelated user listed as developer"
+    ],
+    "confidence_score": 1,
+    "notes": "Real profile for a high school student, completely unrelated to Solana (mistakenly listed as Solana Core Developer)."
+  },
+  {
+    "handle": "@otkin",
+    "url": "https://x.com/otkin",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": null,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Real person on Twitter"
+    ],
+    "is_solana_relevant": false,
+    "solana_connection_type": "none",
+    "solana_evidence": [],
+    "red_flags": [
+      "Incorrect/unrelated user listed as developer"
+    ],
+    "confidence_score": 1,
+    "notes": "Real profile for Sergey Pukovich, completely unrelated to Solana (mistakenly listed as Solana Rust Developer)."
+  },
+  {
+    "handle": "@tex_solana",
+    "url": "https://x.com/tex_solana",
+    "link_status": "broken",
+    "is_active": false,
+    "last_activity_days_ago": null,
+    "is_legitimate": false,
+    "legitimacy_reasons": [
+      "Hallucinated profile name"
+    ],
+    "is_solana_relevant": false,
+    "solana_connection_type": "none",
+    "solana_evidence": [],
+    "red_flags": [
+      "Hallucinated profile"
+    ],
+    "confidence_score": 1,
+    "notes": "Hallucinated developer profile."
+  },
+  {
+    "handle": "@0xdetweiler",
+    "url": "https://x.com/0xdetweiler",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with 3rdSt Capital/Builder"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Theo Detweiler (3rdSt Capital/Builder)."
+  },
+  {
+    "handle": "@a1lon9",
+    "url": "https://x.com/A1lon9",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Pump.fun (Co-Founder)"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Alon (Pump.fun (Co-Founder))."
+  },
+  {
+    "handle": "@0xinfra",
+    "url": "https://x.com/0xINFRA",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "project_account",
+    "solana_evidence": [
+      "Associated with Raydium Protocol"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for 0xINFRA (Raydium Protocol)."
+  },
+  {
+    "handle": "@naruto11eth",
+    "url": "https://x.com/naruto11eth",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Avail Developer"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Naruto11.eth (Avail Developer)."
+  },
+  {
+    "handle": "@madhattersol",
+    "url": "https://x.com/MadHatterSol",
+    "link_status": "broken",
+    "is_active": false,
+    "last_activity_days_ago": null,
+    "is_legitimate": false,
+    "legitimacy_reasons": [
+      "Hallucinated profile name"
+    ],
+    "is_solana_relevant": false,
+    "solana_connection_type": "none",
+    "solana_evidence": [],
+    "red_flags": [
+      "Hallucinated profile"
+    ],
+    "confidence_score": 1,
+    "notes": "Hallucinated developer profile."
+  },
+  {
+    "handle": "@jump_firedancer",
+    "url": "https://x.com/jump_firedancer",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Firedancer Validator"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Jump Firedancer (Firedancer Validator)."
+  },
+  {
+    "handle": "@seabedlabs",
+    "url": "https://x.com/SeabedLabs",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Solana Infrastructure"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Seabed Labs (Solana Infrastructure)."
+  },
+  {
+    "handle": "@messaricrypto",
+    "url": "https://x.com/MessariCrypto",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Associated with Crypto Research Firm"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Messari (Crypto Research Firm)."
+  },
+  {
+    "handle": "@stepfinance_",
+    "url": "https://x.com/StepFinance_",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with DeFi Analytics Dashboard"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Step Finance (DeFi Analytics Dashboard)."
+  },
+  {
+    "handle": "@dunesolana",
+    "url": "https://x.com/DuneSolana",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Data Analytics"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Dune Analytics Solana (Data Analytics)."
+  },
+  {
+    "handle": "@tokenunlocks",
+    "url": "https://x.com/TokenUnlocks",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Associated with Tokenomics Research"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Token Unlocks (Tokenomics Research)."
+  },
+  {
+    "handle": "@santiagorsantos",
+    "url": "https://x.com/santiagorsantos",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Associated with Crypto Researcher/1kX"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Santiago R. Santos (Crypto Researcher/1kX)."
+  },
+  {
+    "handle": "@spencernoon",
+    "url": "https://x.com/SpencerNoon",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Associated with Industry Researcher/Investor"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Spencer Noon (Industry Researcher/Investor)."
+  },
+  {
+    "handle": "@rektcapital",
+    "url": "https://x.com/RektCapital",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Associated with Technical Analysis/Research"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Rekt Capital (Technical Analysis/Research)."
+  },
+  {
+    "handle": "@0xliang",
+    "url": "https://x.com/0xliang",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Associated with Solana On-chain Analyst"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for 协力 (Xie) (Solana On-chain Analyst)."
+  },
+  {
+    "handle": "@helios_sol",
+    "url": "https://x.com/HeliOS_Sol",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "researcher",
+    "solana_evidence": [
+      "Associated with Research & Development"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for HeliOS (Research & Development)."
+  },
+  {
+    "handle": "@superteam",
+    "url": "https://x.com/superteam",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Ecosystem Growth/BD"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Superteam (Ecosystem Growth/BD)."
+  },
+  {
+    "handle": "@magiceden",
+    "url": "https://x.com/MagicEden",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with NFT Marketplace/BD"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Magic Eden (NFT Marketplace/BD)."
+  },
+  {
+    "handle": "@wormhole",
+    "url": "https://x.com/wormhole",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Cross-chain/BD"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Wormhole (Cross-chain/BD)."
+  },
+  {
+    "handle": "@jitofdn",
+    "url": "https://x.com/JitoFDN",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Liquid Staking/BD"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Jito Foundation (Liquid Staking/BD)."
+  },
+  {
+    "handle": "@kaminofinance",
+    "url": "https://x.com/KaminoFinance",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with DeFi/Partnerships"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Kamino Finance (DeFi/Partnerships)."
+  },
+  {
+    "handle": "@solanasensei",
+    "url": "https://x.com/SolanaSensei",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Namaste Collection/Educator"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Solana Sensei (Namaste Collection/Educator)."
+  },
+  {
+    "handle": "@cozypront",
+    "url": "https://x.com/cozypront",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Associated with Block9_NFT/Marketing"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for cozypront (Block9_NFT/Marketing)."
+  },
+  {
+    "handle": "@soljakey",
+    "url": "https://x.com/SolJakey",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Associated with Bell Studios/DRiP Ambassador"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for SolJakey (Bell Studios/DRiP Ambassador)."
+  },
+  {
+    "handle": "@cryptoanglio",
+    "url": "https://x.com/CryptoAnglio",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Doom Syndicate/Memecoins"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for CryptoAnglio (Doom Syndicate/Memecoins)."
+  },
+  {
+    "handle": "@leonardnftpage",
+    "url": "https://x.com/leonardnftpage",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Associated with NFT Giveaways/Community"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Leonard NFT Page (NFT Giveaways/Community)."
+  },
+  {
+    "handle": "@mortyweb3",
+    "url": "https://x.com/MortyWeb3",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Associated with Giveaways/Community"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for MortyWeb3 (Giveaways/Community)."
+  },
+  {
+    "handle": "@solananewton",
+    "url": "https://x.com/SolanaNewton",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Memecoin Hunter/Maximalist"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for SolanaNewton (Memecoin Hunter/Maximalist)."
+  },
+  {
+    "handle": "@thesolanaboss",
+    "url": "https://x.com/TheSolanaBoss",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Crypto Insider/Cross-chain"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for TheSolanaBoss (Crypto Insider/Cross-chain)."
+  },
+  {
+    "handle": "@solcommunityy",
+    "url": "https://x.com/SolCommunityy",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Associated with Community Marketing"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Solana Community (Community Marketing)."
+  },
+  {
+    "handle": "@crowdcreate_us",
+    "url": "https://x.com/crowdcreate_us",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Associated with Crypto Marketing Agency"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Crowdcreate (Crypto Marketing Agency)."
+  },
+  {
+    "handle": "@backpackapp",
+    "url": "https://x.com/BackpackApp",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "project_account",
+    "solana_evidence": [
+      "Associated with xNFT Platform/Wallet"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Backpack (xNFT Platform/Wallet)."
+  },
+  {
+    "handle": "@bonk_inu",
+    "url": "https://x.com/bonk_inu",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "community_builder",
+    "solana_evidence": [
+      "Associated with Meme Coin Community"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Bonk (Meme Coin Community)."
+  },
+  {
+    "handle": "@birdeye_so",
+    "url": "https://x.com/birdeye_so",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "project_account",
+    "solana_evidence": [
+      "Associated with Data/Analytics Platform"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Birdeye (Data/Analytics Platform)."
+  },
+  {
+    "handle": "@helium",
+    "url": "https://x.com/helium",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "project_account",
+    "solana_evidence": [
+      "Associated with DePIN Network"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Helium (DePIN Network)."
+  },
+  {
+    "handle": "@metaplex",
+    "url": "https://x.com/metaplex",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "project_account",
+    "solana_evidence": [
+      "Associated with NFT Protocol"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Metaplex (NFT Protocol)."
+  },
+  {
+    "handle": "@sagamobiledao",
+    "url": "https://x.com/SagaMobileDAO",
+    "link_status": "working",
+    "is_active": true,
+    "last_activity_days_ago": 1,
+    "is_legitimate": true,
+    "legitimacy_reasons": [
+      "Active contributor or project in Solana ecosystem",
+      "Verified working link"
+    ],
+    "is_solana_relevant": true,
+    "solana_connection_type": "individual_contributor",
+    "solana_evidence": [
+      "Associated with Phone/Ecosystem"
+    ],
+    "red_flags": [],
+    "confidence_score": 1,
+    "notes": "Ecosystem profile for Saga Mobile DAO (Phone/Ecosystem)."
+  }
+]

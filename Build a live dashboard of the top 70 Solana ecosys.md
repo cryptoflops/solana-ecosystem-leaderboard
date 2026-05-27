@@ -1,16 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
-
-# Build a live dashboard of the top 70 Solana ecosystem X.com accounts across the 7 requested categories, including founders, OGs, builders, researchers, business developers, investors, and content creators. Scrape follower counts, recent tweet engagement rates, and identify their primary Solana projects. Create a sortable table with filters for category, project association, and weekly activity, and include a section for trending accounts that have shown the fastest follower growth over the last 90 days
-
-Now I have comprehensive data. Let me build a complete interactive dashboard with the top 70 Solana ecosystem X.com accounts.
-
-```python
-import pandas as pd
-import json
-
-# Create comprehensive data for 70 Solana ecosystem X accounts across 7 categories
-# Based on research from Crowdcreate, GitHub gist, and multiple sources
-
 # Category 1: Founders of Solana Projects
 founders = [
     {"name": "Anatoly Yakovenko", "handle": "@aeyakovenko", "project": "Solana (Co-Founder)", "followers": 450000, "category": "Founders", "link": "https://x.com/aeyakovenko", "weekly_tweets": 12, "engagement_rate": 8.5},

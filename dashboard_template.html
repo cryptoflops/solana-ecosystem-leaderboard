@@ -1316,11 +1316,11 @@
 
     function getCategoryClass(cat) {
       if (cat.includes('Founders')) return 'Founders';
-      if (cat.includes('OGs')) return 'DeFi';
-      if (cat.includes('Builders') || cat.includes('developer')) return 'Infrastructure';
-      if (cat.includes('Researchers') || cat.includes('Research')) return 'Research';
-      if (cat.includes('Business') || cat.includes('BD')) return 'Regional';
-      if (cat.includes('Marketing') || cat.includes('Community') || cat.includes('Media')) return 'Community';
+      if (cat.includes('DeFi')) return 'DeFi';
+      if (cat.includes('Infrastructure')) return 'Infrastructure';
+      if (cat.includes('Community') || cat.includes('Marketing')) return 'Community';
+      if (cat.includes('Research')) return 'Research';
+      if (cat.includes('Regional')) return 'Regional';
       return 'Founders';
     }
 
